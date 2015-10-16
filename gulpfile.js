@@ -63,6 +63,7 @@ gulp.task('quickbase-push', function() {
   //yes
 });
 
+//manually trigger deployment
 gulp.task('deploy', function() {
   gulp.start.apply(this, deployTasks);
 });
