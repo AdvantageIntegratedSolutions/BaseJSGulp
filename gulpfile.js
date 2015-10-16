@@ -19,7 +19,6 @@ var adminTasks = [
 
 //tasks related to code
 var bundleTasks = [
-  'clean',
   'move-pages',
   'build-js', 
   'build-css', 
