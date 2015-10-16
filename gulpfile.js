@@ -40,7 +40,7 @@ gulp.task('clean', function() {
 });
 
 //move pages
-gulp.task('move-pages', ['clean'], function() {
+gulp.task('move-pages', function() {
   return gulp.src('source/*.html')
     .pipe(concat(app.name + '.html'))
     .pipe(gulp.dest('public/'));
