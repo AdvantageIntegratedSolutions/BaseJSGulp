@@ -7,8 +7,7 @@ var app = require('./app.json'),
     babel = require('gulp-babel'),
     sourcemaps = require('gulp-sourcemaps'),
     git = require('gulp-git'),
-    debug = require('gulp-debug'),
-    rimraf = require('gulp-rimraf');
+    debug = require('gulp-debug');
 
 //tasks not related to code
 var adminTasks = [
