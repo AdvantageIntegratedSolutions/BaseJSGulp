@@ -59,12 +59,12 @@ gulp.task('addRemote', function(){
 
 //push to git
 gulp.task('git-add', ['build-js', 'build-css'], function(){
-  return gulp.src('.')
+  return gulp.src('./')
     .pipe(git.add())
 });
 
 gulp.task('git-commit', ['git-add'], function(){
-  return gulp.src('.')
+  return gulp.src('./')
     .pipe(git.commit('Auto commited by gulp'));
 });
 
@@ -86,5 +86,5 @@ gulp.task('deploy', function() {
 
 //configure tasks to run on all file changes
 gulp.task('watch', function() {
-  gulp.watch('.', deployTasks);
+  gulp.watch('./', deployTasks);
 });

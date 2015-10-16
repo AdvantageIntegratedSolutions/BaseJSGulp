@@ -1,8 +1,8 @@
 {
-  "name": "BaseJSGulp", //optional
-  "dbid": "", //required
-  "username": "", //required
-  "password": "", //required
-  "token": "", //optional
-  "origin": "https://github.com/KitHensel/BaseJSGulp.git" //required
+  "name": "BaseJSGulp",
+  "dbid": "",
+  "username": "",
+  "password": "",
+  "token": "",
+  "origin": "https://github.com/KitHensel/BaseJSGulp.git"
 }
