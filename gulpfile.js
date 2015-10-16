@@ -29,12 +29,17 @@ gulp.task('build-js', function() {
 });
 
 //push to git
-gulp.task('git-add', function(){
-  return gulp.src('*')
+gulp.task('git-add', ['build-js', 'build-css'], function(){
+  return gulp.src('.')
     .pipe(git.add())
 });
 
-gulp.task('git-push', function(){
+gulp.task('git-commit', ['git-add'], function(){
+  return gulp.src('.')
+    .pipe(git.commit('.'));
+});
+
+gulp.task('git-push', ['git-commit'], function() {
   git.push('origin', 'master', function (err) {
     if (err) throw err;
   });
@@ -47,7 +52,7 @@ gulp.task('quickbase-push', function() {
 
 //configure tasks to run on file changes
 gulp.task('watch', function() {
-  gulp.watch("*", ['git-push', 'quickbase-push']);
-  gulp.watch('source/javascript/**/*.js', ['build-js', 'git-add', 'quickbase-push']);
-  gulp.watch('source/scss/**/*.scss', ['build-css', 'git-add', 'quickbase-push']);
+  var tasks = ['build-js', 'git-add', 'git-commit', 'git-push', 'quickbase-push'];
+  gulp.watch('source/javascript/**/*.js', tasks);
+  gulp.watch('source/scss/**/*.scss', tasks);
 });
