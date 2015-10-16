@@ -95,11 +95,6 @@ gulp.task('quickbase-push', function() {
   //yes
 });
 
-//manually trigger admin tasks
-gulp.task('admin', function() {
-  gulp.start.apply(this, adminTasks);
-});
-
 //manually trigger deployment
 gulp.task('deploy', function() {
   gulp.start.apply(this, bundleTasks);
