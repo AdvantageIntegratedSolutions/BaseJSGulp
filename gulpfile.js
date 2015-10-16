@@ -8,7 +8,15 @@ var app = require('./app.json'),
     sourcemaps = require('gulp-sourcemaps'),
     git = require('gulp-git');
 
-var deployTasks = [
+//tasks not related to code
+var adminTasks = [
+  'git-add', 
+  'git-commit', 
+  'git-push'
+];
+
+//tasks related to code
+var bundleTasks = [
   'build-js', 
   'build-css', 
   'git-add', 
@@ -81,10 +89,11 @@ gulp.task('quickbase-push', function() {
 
 //manually trigger deployment
 gulp.task('deploy', function() {
-  gulp.start.apply(this, deployTasks);
+  gulp.start.apply(this, bundleTasks);
 });
 
 //configure tasks to run on all file changes
 gulp.task('watch', function() {
-  gulp.watch('source/**/*', deployTasks);
+  gulp.watch(['app.json'], adminTasks);
+  gulp.watch('source/**/*', bundleTasks);
 });
