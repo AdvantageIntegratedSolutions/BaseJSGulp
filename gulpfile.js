@@ -40,7 +40,7 @@ gulp.task('move-pages', function() {
 gulp.task('build-css', function() {
   return gulp.src('source/scss/**/*.scss')
     .pipe(sass())
-    .pipe(gulp.dest('public/assets/stylesheets/' + app.name + ".css"));
+    .pipe(gulp.dest('public/assets/stylesheets'));
 });
 
 //compile JS
