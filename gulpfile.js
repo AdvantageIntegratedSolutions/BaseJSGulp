@@ -1,4 +1,5 @@
-var gulp = require('gulp'),
+var app = require('./app.json'),
+    gulp = require('gulp'),
 		gutil = require('gulp-util'),
     sass = require('gulp-sass'),
     concat = require('gulp-concat'),
@@ -39,6 +40,21 @@ gulp.task('build-js', function() {
 
 gulp.task('deploy', function(){
   gulp.start('git-add', 'git-commit', 'git-push');
+});
+
+//git init repo
+gulp.task('init', function(){
+  git.init(function (err) {
+    if (err) throw err;
+    gulp.start('addRemote');
+  });
+});
+
+//add remote origin
+gulp.task('addRemote', function(){
+  git.addRemote('origin', app.origin, function (err) {
+    if (err) throw err;
+  });
 });
 
 //push to git
