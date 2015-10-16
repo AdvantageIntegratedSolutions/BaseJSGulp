@@ -92,7 +92,7 @@ gulp.task('git-push', ['git-commit'], function() {
 
 //push to QuickBase App
 gulp.task('quickbase-push', function() {
-  //yes
+  
 });
 
 //manually trigger deployment
