@@ -7,6 +7,15 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     git = require('gulp-git');
 
+var deployTasks = [
+  'build-js', 
+  'build-css', 
+  'git-add', 
+  'git-commit', 
+  'git-push', 
+  'quickbase-push'
+];
+
 //add the watch task as default
 gulp.task('default', ['watch']);
 
@@ -26,6 +35,10 @@ gulp.task('build-js', function() {
     .pipe(uglify())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('public/assets/javascript'));
+});
+
+gulp.task('deploy', function(){
+  gulp.start('git-add', 'git-commit', 'git-push');
 });
 
 //push to git
@@ -50,16 +63,11 @@ gulp.task('quickbase-push', function() {
   //yes
 });
 
+gulp.task('deploy', function() {
+  gulp.start.apply(this, deployTasks);
+});
+
 //configure tasks to run on all file changes
 gulp.task('watch', function() {
-  var tasks = [
-    'build-js', 
-    'build-css', 
-    'git-add', 
-    'git-commit', 
-    'git-push', 
-    'quickbase-push'
-  ];
-
-  gulp.watch('.', tasks);
+  gulp.watch('.', deployTasks);
 });
