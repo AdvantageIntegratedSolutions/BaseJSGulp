@@ -8,7 +8,6 @@
     "gulp-sass": "*",
     "gulp-sourcemaps": "*",
     "gulp-uglify": "*",
-    "gulp-util": "*",
-    "gulp-debug": "*"
+    "gulp-util": "*"
   }
 }
