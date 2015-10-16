@@ -11,6 +11,7 @@ var app = require('./app.json'),
 
 //tasks not related to code
 var adminTasks = [
+  'move-pages',
   'git-add', 
   'git-commit', 
   'git-push'
