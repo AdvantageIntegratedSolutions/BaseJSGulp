@@ -7,7 +7,8 @@ var app = require('./app.json'),
     babel = require('gulp-babel'),
     sourcemaps = require('gulp-sourcemaps'),
     git = require('gulp-git'),
-    debug = require('gulp-debug');
+    debug = require('gulp-debug'),
+    rimraf = require('gulp-rimraf');
 
 //tasks not related to code
 var adminTasks = [
@@ -18,6 +19,7 @@ var adminTasks = [
 
 //tasks related to code
 var bundleTasks = [
+  'clean',
   'move-pages',
   'build-js', 
   'build-css', 
@@ -30,10 +32,17 @@ var bundleTasks = [
 //add the watch task as default
 gulp.task('default', ['watch']);
 
+
+//remove files
+gulp.task('clean', function() {
+  return gulp.src('public/*.html', { read: false }) // much faster 
+    .pipe(rimraf());
+});
+
 //move pages
-gulp.task('move-pages', function() {
+gulp.task('move-pages', ['clean'], function() {
   return gulp.src('source/*.html')
-    .pipe(app.name + '.html')
+    .pipe(concat(app.name + '.html'))
     .pipe(gulp.dest('public/'));
 });
 
@@ -75,7 +84,7 @@ gulp.task('addRemote', function(){
 });
 
 //push to git
-gulp.task('git-add', ['move-pages', 'build-js', 'build-css'], function(){
+gulp.task('git-add', ['clean', 'move-pages', 'build-js', 'build-css'], function(){
   return gulp.src('./')
     .pipe(git.add())
 });
