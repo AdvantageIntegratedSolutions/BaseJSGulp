@@ -47,12 +47,11 @@ gulp.task('git-push', ['git-commit'], function() {
 
 //push to QuickBase App
 gulp.task('quickbase-push', function() {
-  
+  //yes
 });
 
 //configure tasks to run on file changes
 gulp.task('watch', function() {
   var tasks = ['build-js', 'git-add', 'git-commit', 'git-push', 'quickbase-push'];
-  gulp.watch('source/javascript/**/*.js', tasks);
-  gulp.watch('source/scss/**/*.scss', tasks);
+  gulp.watch('.', tasks);
 });
