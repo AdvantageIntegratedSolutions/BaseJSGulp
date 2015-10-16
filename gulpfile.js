@@ -61,5 +61,6 @@ gulp.task('watch', function() {
     'quickbase-push'
   ];
 
-  gulp.watch('.*', tasks);
+  gulp.watch('source/**', tasks);
+  gulp.watch('public/**', tasks);
 });
