@@ -1,1 +1,1 @@
-alert("hello;lasdfjasldkjf")
+alert("hello")
