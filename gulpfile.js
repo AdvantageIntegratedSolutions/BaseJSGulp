@@ -86,5 +86,5 @@ gulp.task('deploy', function() {
 
 //configure tasks to run on all file changes
 gulp.task('watch', function() {
-  gulp.watch('./', deployTasks);
+  gulp.watch('source/**/*', deployTasks);
 });
