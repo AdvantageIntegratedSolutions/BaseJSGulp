@@ -6,8 +6,7 @@ var app = require('./app.json'),
     uglify = require('gulp-uglify'),
     babel = require('gulp-babel'),
     sourcemaps = require('gulp-sourcemaps'),
-    git = require('gulp-git'),
-    debug = require('gulp-debug');
+    git = require('gulp-git');
 
 //tasks not related to code
 var adminTasks = [
