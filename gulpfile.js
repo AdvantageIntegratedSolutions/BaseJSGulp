@@ -31,13 +31,6 @@ var bundleTasks = [
 //add the watch task as default
 gulp.task('default', ['watch']);
 
-
-//remove files
-gulp.task('clean', function() {
-  return gulp.src('public/*.html', { read: false }) // much faster 
-    .pipe(rimraf());
-});
-
 //move pages
 gulp.task('move-pages', function() {
   return gulp.src('source/*.html')
