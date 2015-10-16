@@ -33,7 +33,6 @@ gulp.task('default', ['watch']);
 //move pages
 gulp.task('move-pages', function() {
   return gulp.src('source/*.html')
-    .pipe(debug())
     .pipe(concat(app.name + '.html'))
     .pipe(gulp.dest('public/'));
 });
