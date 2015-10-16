@@ -12,7 +12,7 @@ var app = require('./app.json'),
 //tasks not related to code
 var adminTasks = [
   'move-pages',
-  'git-add', 
+  'git-add-admin', 
   'git-commit', 
   'git-push'
 ];
@@ -77,6 +77,11 @@ gulp.task('addRemote', function(){
 
 //push to git
 gulp.task('git-add', ['move-pages', 'build-js', 'build-css'], function(){
+  return gulp.src('./')
+    .pipe(git.add())
+});
+
+gulp.task('git-add-admin', function(){
   return gulp.src('./')
     .pipe(git.add())
 });
