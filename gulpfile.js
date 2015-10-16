@@ -87,6 +87,11 @@ gulp.task('quickbase-push', function() {
   //yes
 });
 
+//manually trigger admin tasks
+gulp.task('admin', function() {
+  gulp.start.apply(this, adminTasks);
+});
+
 //manually trigger deployment
 gulp.task('deploy', function() {
   gulp.start.apply(this, bundleTasks);
@@ -94,6 +99,6 @@ gulp.task('deploy', function() {
 
 //configure tasks to run on all file changes
 gulp.task('watch', function() {
-  gulp.watch(['app.json'], adminTasks);
+  gulp.watch(['app.json', 'gulpfile.js', 'packages.json', 'README', '.gitignore'], adminTasks);
   gulp.watch('source/**/*', bundleTasks);
 });
