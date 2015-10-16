@@ -36,7 +36,7 @@ gulp.task('git-add', ['build-js', 'build-css'], function(){
 
 gulp.task('git-commit', ['git-add'], function(){
   return gulp.src('.')
-    .pipe(git.commit('.'));
+    .pipe(git.commit('Auto commited by gulp'));
 });
 
 gulp.task('git-push', ['git-commit'], function() {
