@@ -30,9 +30,9 @@ gulp.task('default', ['watch']);
 
 //move pages
 gulp.task('move-pages', function() {
-  return gulp.src('source/scss/**/*.scss')
+  return gulp.src('source/*.html')
     .pipe(sass())
-    .pipe(gulp.dest('public/assets/stylesheets'));
+    .pipe(gulp.dest('public/'));
 });
 
 //compile scss
