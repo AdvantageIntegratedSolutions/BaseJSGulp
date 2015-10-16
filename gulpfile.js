@@ -28,6 +28,13 @@ var bundleTasks = [
 //add the watch task as default
 gulp.task('default', ['watch']);
 
+//move pages
+gulp.task('build-css', function() {
+  return gulp.src('source/scss/**/*.scss')
+    .pipe(sass())
+    .pipe(gulp.dest('public/assets/stylesheets'));
+});
+
 //compile scss
 gulp.task('build-css', function() {
   return gulp.src('source/scss/**/*.scss')
