@@ -93,11 +93,14 @@ gulp.task('git-push', ['git-commit'], function() {
 });
 
 //push to QuickBase App
-gulp.task('quickbase-push', function() {
+gulp.task('quickbase-push', function(filename, contents) {
+
+  console.log(gulp.dest('public/assets/stylesheets'));
   var req = new XMLHttpRequest();
 
   var url = "https://" + app.realm + ".quickbase.com/db/" + app.dbid + "?act=API_AddReplaceDBPage";
   req.open("POST", url, true);
+  req.setRequestHeader("Content-Type", "text/xml");
 
   req.onreadystatechange = function() {
     if(req.readyState == 4 && req.status == 200) {
@@ -105,8 +108,6 @@ gulp.task('quickbase-push', function() {
       console.log("Finished QB page upload: " + xml.pageID);
     };
   };
-
-  req.setRequestHeader("Content-Type", "text/xml");
 
   var ticket = "8_bkb65j6xd_by5veh_bkh_a_d86rihfd2pbmvqca5pa58d5pb2ivbjhgpnpcp4ug59dticsbhdueyhaw";
   var pageBody = "hello";
