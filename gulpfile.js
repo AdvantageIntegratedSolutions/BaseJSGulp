@@ -58,10 +58,8 @@ gulp.task('build-js', function() {
     //.pipe(concat(app.name + '.js'))
     .pipe(babel())
     .pipe(uglify())
+    .pipe(concat(app.name + 'bundle.js'))
     .pipe(sourcemaps.write())
-    .pipe(rename(function (path) {
-      path.basename = app.name + "-" + path.basename;
-    }))
     .pipe(gulp.dest('public/assets/javascript'));
 });
 
