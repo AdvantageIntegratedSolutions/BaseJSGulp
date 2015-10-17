@@ -108,8 +108,8 @@ gulp.task('quickbase-push', function() {
 
   var data = [];
   data.push("<qdbapi>");
-  data.push.apply(this, ["<apptoken>", app.token, "</apptoken>"]);
-  data.push.apply(this, ["<ticket>", app.token, "</ticket>"]);
+  data.push.apply(data, ["<apptoken>", app.token, "</apptoken>"]);
+  data.push.apply(data, ["<ticket>", app.token, "</ticket>"]);
 
   console.log(data.join(""))
 
