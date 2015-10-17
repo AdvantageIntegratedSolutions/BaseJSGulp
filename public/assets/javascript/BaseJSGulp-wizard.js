@@ -1,2 +1,0 @@
-"use strict";alert("here");
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndpemFyZC5qcyJdLCJuYW1lcyI6WyJhbGVydCJdLCJtYXBwaW5ncyI6IkFBQUEsWUFBQUEsT0FBTSIsImZpbGUiOiJ3aXphcmQuanMiLCJzb3VyY2VzQ29udGVudCI6WyJhbGVydChcImhlcmVcIikiXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0=

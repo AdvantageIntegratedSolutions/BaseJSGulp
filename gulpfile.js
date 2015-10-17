@@ -45,9 +45,7 @@ gulp.task('move-pages', function() {
 gulp.task('build-css', function() {
   return gulp.src('source/scss/**/*.scss')
     .pipe(sass())
-    .pipe(rename(function (path) {
-      path.basename = app.name + "-" + path.basename;
-    }))
+    .pipe(concat(app.name + '-styles.css'))
     .pipe(gulp.dest('public/assets/stylesheets'));
 });
 
