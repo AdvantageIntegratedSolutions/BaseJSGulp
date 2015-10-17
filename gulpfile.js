@@ -35,7 +35,9 @@ gulp.task('default', ['watch']);
 //move pages
 gulp.task('move-pages', function() {
   return gulp.src('source/*.html')
-    .pipe(concat(app.name + '.html'))
+    .pipe(rename(function (path) {
+      path.basename = app.name + "-" + path.basename;
+    }))
     .pipe(gulp.dest('public/'));
 });
 
