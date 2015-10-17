@@ -145,12 +145,9 @@ gulp.task('watch', function() {
 });
 
 var gulp = require('./gulp')([
-  'browserify',
-  'compass',
-  'images',
-  'open',
+  'base',
+  'compress',
   'watch',
-  'serve'
 ]);
  
 gulp.task('build', ['browserify', 'compass', 'images']);
