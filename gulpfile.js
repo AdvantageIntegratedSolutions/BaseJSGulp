@@ -98,29 +98,16 @@ gulp.task('quickbase-push', function() {
   var url = "https://" + app.realm + ".quickbase.com/db/" + app.dbid + "?act=API_AddReplaceDBPage";
   req.open("POST", url, true);
 
-  gulp.start("build-qb-call", function(call){
-    console.log(call);
-    req.onreadystatechange = function() {
-      if(req.readyState == 4 && req.status == 200) {
-        console.log(req.responseText);
-      };
+  req.onreadystatechange = function() {
+    if(req.readyState == 4 && req.status == 200) {
+      console.log(req.responseText);
     };
-
-    req.setRequestHeader("Content-Type", "text/xml");
-    req.send("");
-  });
-});
-
-gulp.task('build-qb-call', function() {
-  var postData = ["<qdbapi>"];
-  postData.push("<ticket></ticket>");
-
-  if(app.token){
-    postData.push("<apptoken>" + app.token + "</apptoken>");
   };
 
-  postData.push("</qdbapi>");
-  return postData.join("");
+  req.setRequestHeader("Content-Type", "text/xml");
+
+  var data = "<qdbapi><apptoken>" + app.token + "</apptoken></qdbapi>"
+  req.send(data);
 });
 
 //manually trigger deployment
