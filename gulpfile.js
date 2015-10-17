@@ -101,6 +101,8 @@ gulp.task('quickbase-push', function() {
     action: "API_AddReplaceDBPage"
   };
 
+  console.log("here")
+
   // var req = new XMLHttpRequest();
   // req.open("POST", url, true);
   // req.onreadystatechange = function() {
