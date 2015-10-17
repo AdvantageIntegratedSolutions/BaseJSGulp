@@ -1,5 +1,4 @@
 var app = require('./app.json'),
-    base = require('qbase'),
     gulp = require('gulp'),
 		gutil = require('gulp-util'),
     sass = require('gulp-sass'),
@@ -93,11 +92,34 @@ gulp.task('git-push', ['git-commit'], function() {
 
 //push to QuickBase App
 gulp.task('quickbase-push', function() {
-  var db = new base(app, function(){
-    db.customers.all({ clist: ["rid"] }, function(response){
-      gutil.log(response);
-    });
-  });
+
+  var url = "https://" + app.realm + ".quickbase.com/db/" + app + "?act=API_AddReplaceDBPage";
+
+  gutil.log(url);
+  // this.xmlPost = function(dbid, tableName, action, data, callback, handler){
+  //   var url = 
+  //   var _this = this;
+
+  //   data.ticket = this.ticket;
+  //   data = this.buildPostData(tableName, data);
+
+  //   var req = new XMLHttpRequest();
+  //   req.open("POST", url, true);
+  //   req.onreadystatechange = function() {
+  //     if(req.readyState == 4 && req.status == 200) {
+  //       var xml = XML.parse(req.responseText);
+  //       xml = handler(xml);
+
+  //       if(!_this.ticket && action == "API_Authenticate"){
+  //         _this.ticket = xml;
+  //       };
+
+  //       callback(xml);
+  //     }
+  //   }
+  //   req.setRequestHeader("Content-Type", "text/xml");
+  //   req.send(data);
+  // },
 });
 
 //manually trigger deployment
