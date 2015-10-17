@@ -98,10 +98,6 @@ gulp.task('git-push', ['git-commit'], function() {
   });
 });
 
-gulp.task('quickbase-auth', function() {
-
-});
-
 //push to QuickBase App
 gulp.task('quickbase-push', function(filename, contents) {
 
