@@ -39,7 +39,7 @@ gulp.task('move-pages', function() {
     .pipe(rename(function (path) {
       path.basename = app.name + "-" + path.basename;
     }))
-    .pipe(insertLines({ 'before': /<html>/, 'lineBefore': 'hello world' }))
+    .pipe(insertLines({ 'before': /<html>/, 'lineBefore': '<!-- '+app.origin+' -->' }))
     .pipe(gulp.dest('quickbase/'));
 });
 
