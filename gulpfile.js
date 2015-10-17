@@ -56,7 +56,6 @@ gulp.task('build-js', function() {
     .pipe(sourcemaps.write())
     .pipe(rename(function (path) {
       path.basename += "-goodbye";
-      path.extname = ".md"
     }))
     .pipe(gulp.dest('public/assets/javascript'));
 });
