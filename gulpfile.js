@@ -38,7 +38,7 @@ gulp.task('move-pages', function() {
     .pipe(rename(function (path) {
       path.basename = app.name + "-" + path.basename;
     }))
-    .pipe(gulp.dest('public/'));
+    .pipe(gulp.dest('quickbase/'));
 });
 
 //compile scss
@@ -46,7 +46,7 @@ gulp.task('build-css', function() {
   return gulp.src('source/scss/**/*')
     .pipe(sass())
     .pipe(concat(app.name + '-'+app.cssBundlePrefix+'.css'))
-    .pipe(gulp.dest('public/'));
+    .pipe(gulp.dest('quickbase/'));
 });
 
 //compile JS
@@ -58,7 +58,7 @@ gulp.task('build-js', function() {
     .pipe(uglify())
     .pipe(concat(app.name + '-'+app.jsBundlePrefix+'.js'))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('public/'));
+    .pipe(gulp.dest('quickbase/'));
 });
 
 gulp.task('deploy', function(){
