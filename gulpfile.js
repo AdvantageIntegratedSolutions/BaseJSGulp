@@ -45,7 +45,7 @@ gulp.task('build-css', function() {
 
 //compile JS
 gulp.task('build-js', function() {
-  return gulp.src('source/javascript/**/*.js')
+  return gulp.src('source/javascript/*.js')
     .pipe(sourcemaps.init())
     .pipe(concat(app.name + '.js'))
     .pipe(babel())
