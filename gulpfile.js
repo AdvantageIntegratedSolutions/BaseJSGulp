@@ -24,7 +24,6 @@ var adminTasks = [
 var bundleTasks = [
   'move-pages',
   'build-js', 
-  'build-jsx', 
   'build-css', 
   'git-add', 
   'git-commit', 
@@ -56,21 +55,13 @@ gulp.task('build-css', function() {
 
 //compile JS
 gulp.task('build-js', function() {
-  return gulp.src('source/javascript/**/*.js')
+  return gulp.src('source/javascript/**/*')
     .pipe(sourcemaps.init())
+    .pipe(react())
     .pipe(babel())
     .pipe(uglify())
     .pipe(concat(app.name + '-'+app.jsBundlePrefix+'.js'))
     .pipe(insert.prepend('//'+app.origin+'\n'))
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest('quickbase/'));
-});
-
-//compile JSX
-gulp.task('build-jsx', function() {
-  return gulp.src('source/javascript/**/*.jsx')
-    .pipe(sourcemaps.init())
-    .pipe(react())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('quickbase/'));
 });
@@ -95,7 +86,7 @@ gulp.task('addRemote', function(){
 });
 
 //push to git
-gulp.task('git-add', ['move-pages', 'build-js', 'build-jsx', 'build-css'], function(){
+gulp.task('git-add', ['move-pages', 'build-js', 'build-css'], function(){
   return gulp.src('.')
     .pipe(git.add())
 });
