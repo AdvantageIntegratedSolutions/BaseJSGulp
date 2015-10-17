@@ -19,5 +19,5 @@ gulp.task('js', function() {
     .pipe(concat(app.name + '-'+app.jsBundlePrefix+'.js'))
     .pipe(insert.prepend('//'+app.origin+'\n'))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('quickbase/'));
+    .pipe(gulp.dest('qb-pages/'));
 });

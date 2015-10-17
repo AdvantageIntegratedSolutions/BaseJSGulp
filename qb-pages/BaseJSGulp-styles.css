@@ -1,6 +1,6 @@
 /*https://github.com/KitHensel/BaseJSGulp.git*/
-body {
-  color: red; }
-
 html {
-  height: auto; }
+  border: 2px solid black; }
+
+body {
+  background-color: red; }

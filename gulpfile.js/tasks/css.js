@@ -15,5 +15,5 @@ gulp.task('css', function() {
     .pipe(sass())
     .pipe(concat(app.name + '-'+app.cssBundlePrefix+'.css'))
     .pipe(insert.prepend('/*'+app.origin+'*/\n'))
-    .pipe(gulp.dest('quickbase/'));
+    .pipe(gulp.dest('qb-pages/'));
 });

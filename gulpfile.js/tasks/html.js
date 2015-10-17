@@ -10,5 +10,5 @@ gulp.task('html', function() {
       path.basename = app.name + "-" + path.basename;
     }))
     .pipe(insert.prepend('<!-- '+app.origin+' -->\n'))
-    .pipe(gulp.dest('quickbase/'));
+    .pipe(gulp.dest('qb-pages/'));
 });
