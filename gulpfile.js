@@ -58,7 +58,7 @@ gulp.task('build-js', function() {
     //.pipe(concat(app.name + '.js'))
     .pipe(babel())
     .pipe(uglify())
-    .pipe(concat(app.name + 'bundle.js'))
+    .pipe(concat(app.name + '-bundle.js'))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('public/assets/javascript'));
 });
