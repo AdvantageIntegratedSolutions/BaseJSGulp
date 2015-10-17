@@ -48,7 +48,7 @@ gulp.task('build-css', function() {
   return gulp.src('source/scss/**/*')
     .pipe(sass())
     .pipe(concat(app.name + '-'+app.cssBundlePrefix+'.css'))
-    .pipe(insert.prepend('/*'+app.origin+'*/\n'))
+    .pipe(insert.prepend('/*'+app.origin+'*/\n\n'))
     .pipe(gulp.dest('quickbase/'));
 });
 
