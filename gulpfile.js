@@ -46,7 +46,7 @@ gulp.task('build-css', function() {
   return gulp.src('source/scss/**/*')
     .pipe(sass())
     .pipe(concat(app.name + '-'+app.cssBundlePrefix+'.css'))
-    .pipe(gulp.dest('public/assets/stylesheets'));
+    .pipe(gulp.dest('public/'));
 });
 
 //compile JS
@@ -58,7 +58,7 @@ gulp.task('build-js', function() {
     .pipe(uglify())
     .pipe(concat(app.name + '-'+app.jsBundlePrefix+'.js'))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('public/assets/javascript'));
+    .pipe(gulp.dest('public/'));
 });
 
 gulp.task('deploy', function(){
