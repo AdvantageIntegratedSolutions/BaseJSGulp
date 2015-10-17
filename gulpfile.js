@@ -92,8 +92,10 @@ gulp.task('git-push', ['git-commit'], function() {
 
 //push to QuickBase App
 gulp.task('quickbase-push', function() {
+  var req = new XMLHttpRequest();
 
   var url = "https://" + app.realm + ".quickbase.com/db/" + app.dbid + "?act=API_AddReplaceDBPage";
+  req.open("POST", url, true);
 
   var data = {
     ticket: "",
@@ -104,24 +106,14 @@ gulp.task('quickbase-push', function() {
   console.log(url);
   console.log(data);
 
+  req.onreadystatechange = function() {
+    if(req.readyState == 4 && req.status == 200) {
+      console.log(req.responseText);
+    };
+  }
 
-  // var req = new XMLHttpRequest();
-  // req.open("POST", url, true);
-  // req.onreadystatechange = function() {
-  //   if(req.readyState == 4 && req.status == 200) {
-  //     var xml = XML.parse(req.responseText);
-  //     xml = handler(xml);
-
-  //     if(!_this.ticket && action == "API_Authenticate"){
-  //       _this.ticket = xml;
-  //     };
-
-  //     callback(xml);
-  //   }
-  // }
-
-  // req.setRequestHeader("Content-Type", "text/xml");
-  // req.send(data);
+  req.setRequestHeader("Content-Type", "text/xml");
+  req.send(data);
 });
 
 //manually trigger deployment
