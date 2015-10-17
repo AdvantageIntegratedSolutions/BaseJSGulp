@@ -1,4 +1,5 @@
 var app = require('./app.json'),
+    base = require('https://github.com/KitHensel/BaseJS.git'),
     gulp = require('gulp'),
 		gutil = require('gulp-util'),
     sass = require('gulp-sass'),
