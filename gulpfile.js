@@ -55,7 +55,6 @@ gulp.task('build-js', function() {
     .pipe(uglify())
     .pipe(sourcemaps.write())
     .pipe(rename(function (path) {
-      path.dirname += "/ciao";
       path.basename += "-goodbye";
       path.extname = ".md"
     }))
