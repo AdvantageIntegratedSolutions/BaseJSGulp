@@ -98,12 +98,6 @@ gulp.task('quickbase-push', function() {
   var url = "https://" + app.realm + ".quickbase.com/db/" + app.dbid + "?act=API_AddReplaceDBPage";
   req.open("POST", url, true);
 
-  var data = {
-    ticket: "",
-    dbid: app.dbid,
-    action: "API_AddReplaceDBPage"
-  };
-
   gulp.start("build-qb-call", function(call){
     console.log(call);
     req.onreadystatechange = function() {
@@ -113,7 +107,7 @@ gulp.task('quickbase-push', function() {
     };
 
     req.setRequestHeader("Content-Type", "text/xml");
-    req.send(data);
+    req.send("");
   });
 });
 
