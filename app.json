@@ -1,8 +1,15 @@
 {
   "name": "BaseJSGulp",
-  "dbid": "",
-  "username": "",
-  "password": "",
+  "realm": "ais",
+  "databaseId": "bkb4gyte3",
+  "username": "kith",
+  "password": "jasMine5281",
   "token": "",
-  "origin": "https://github.com/KitHensel/BaseJSGulp.git"
+  "origin": "https://github.com/KitHensel/BaseJSGulp.git",
+  "tables": {
+    "customers": {
+      "dbid": "bkb4gytgf",
+      "rid": "3"
+    }
+  }
 }

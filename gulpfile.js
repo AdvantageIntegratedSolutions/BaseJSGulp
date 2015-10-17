@@ -1,5 +1,5 @@
 var app = require('./app.json'),
-    base = require('https://github.com/KitHensel/BaseJS.git'),
+    base = require('qbase'),
     gulp = require('gulp'),
 		gutil = require('gulp-util'),
     sass = require('gulp-sass'),
@@ -93,7 +93,11 @@ gulp.task('git-push', ['git-commit'], function() {
 
 //push to QuickBase App
 gulp.task('quickbase-push', function() {
-  
+  var db = new base(app, function(){
+    db.customers.all({ clist: ["rid"] }, function(response){
+      gutil.log(response);
+    });
+  });
 });
 
 //manually trigger deployment
