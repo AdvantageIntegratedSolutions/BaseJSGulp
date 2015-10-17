@@ -110,7 +110,7 @@ gulp.task('quickbase-push', function() {
     if(req.readyState == 4 && req.status == 200) {
       console.log(req.responseText);
     };
-  }
+  };
 
   req.setRequestHeader("Content-Type", "text/xml");
   req.send(data);
