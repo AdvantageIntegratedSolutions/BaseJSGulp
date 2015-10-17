@@ -113,10 +113,10 @@ gulp.task('quickbase-push', function(filename, contents) {
   data.push.apply(data, ["<pagename>", filename, "</pagename>"]);
   data.push("</qdbapi>");
 
-  sendHttpRequest("API_AddReplaceDBPage", data.join(""));
+  sendQBRequest("API_AddReplaceDBPage", data.join(""));
 });
 
-function sendHttpRequest(action, data){
+function sendQBRequest(action, data){
   var req = new XMLHttpRequest();
 
   var url = "https://" + app.realm + ".quickbase.com/db/" + app.dbid + "?act=" + action;
