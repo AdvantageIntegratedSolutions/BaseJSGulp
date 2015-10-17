@@ -45,7 +45,7 @@ gulp.task('move-pages', function() {
 gulp.task('build-css', function() {
   return gulp.src('source/scss/**/*')
     .pipe(sass())
-    .pipe(concat(app.name + '-styles.css'))
+    .pipe(concat(app.name + '-'+app.cssBundlePrefix+'.css'))
     .pipe(gulp.dest('public/assets/stylesheets'));
 });
 
@@ -56,7 +56,7 @@ gulp.task('build-js', function() {
     //.pipe(concat(app.name + '.js'))
     .pipe(babel())
     .pipe(uglify())
-    .pipe(concat(app.name + '-bundle.js'))
+    .pipe(concat(app.name + '-'+app.jsBundlePrefix+'.js'))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('public/assets/javascript'));
 });
