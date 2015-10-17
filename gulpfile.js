@@ -106,8 +106,14 @@ gulp.task('quickbase-push', function() {
 
   req.setRequestHeader("Content-Type", "text/xml");
 
-  var data = "<qdbapi><apptoken>" + app.token + "</apptoken></qdbapi>"
-  req.send(data);
+  var data = [];
+  data.push("<qdbapi>");
+  data.push.apply(this, ["<apptoken>", app.token, "</apptoken>"]);
+  data.push.apply(this, ["<ticket>", app.token, "</ticket>"]);
+
+  console.log(data.join(""))
+
+  req.send(data.join(""));
 });
 
 //manually trigger deployment
