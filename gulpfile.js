@@ -43,7 +43,7 @@ gulp.task('move-pages', function() {
 
 //compile scss
 gulp.task('build-css', function() {
-  return gulp.src('source/scss/**/*.scss')
+  return gulp.src('source/scss/**/*')
     .pipe(sass())
     .pipe(concat(app.name + '-styles.css'))
     .pipe(gulp.dest('public/assets/stylesheets'));
