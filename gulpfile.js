@@ -95,6 +95,12 @@ gulp.task('quickbase-push', function() {
 
   var url = "https://" + app.realm + ".quickbase.com/db/" + app.dbid + "?act=API_AddReplaceDBPage";
 
+  var data = {
+    dbid: this.tableName,
+    action: "DoQueryCount",
+    params: {"query": query}
+  };
+
   this.xmlPost = function(dbid, tableName, action, data, callback, handler){
     var url = 
     var _this = this;
