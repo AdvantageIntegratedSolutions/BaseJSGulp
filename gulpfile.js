@@ -31,9 +31,6 @@ var bundleTasks = [
   'quickbase-push'
 ];
 
-//add the watch task as default
-gulp.task('default', ['watch']);
-
 //move pages
 gulp.task('move-pages', function() {
   return gulp.src('source/*.html')
