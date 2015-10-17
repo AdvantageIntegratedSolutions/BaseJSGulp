@@ -66,10 +66,6 @@ gulp.task('build-js', function() {
     .pipe(gulp.dest('quickbase/'));
 });
 
-gulp.task('deploy', function(){
-  gulp.start('git-add', 'git-commit', 'git-push');
-});
-
 //git init repo
 gulp.task('init', function(){
   git.init(function (err) {
