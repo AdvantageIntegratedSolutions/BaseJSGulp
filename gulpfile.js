@@ -5,6 +5,7 @@ var app = require('./app.json'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     babel = require('gulp-babel'),
+    react = require('gulp-react'),
     sourcemaps = require('gulp-sourcemaps'),
     git = require('gulp-git'),
     rename = require('gulp-rename'),
@@ -23,6 +24,7 @@ var adminTasks = [
 var bundleTasks = [
   'move-pages',
   'build-js', 
+  'build-jsx', 
   'build-css', 
   'git-add', 
   'git-commit', 
@@ -57,6 +59,18 @@ gulp.task('build-js', function() {
   return gulp.src('source/javascript/**/*.js')
     .pipe(sourcemaps.init())
     .pipe(babel())
+    .pipe(uglify())
+    .pipe(concat(app.name + '-'+app.jsBundlePrefix+'.js'))
+    .pipe(insert.prepend('//'+app.origin+'\n'))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('quickbase/'));
+});
+
+//compile JSX
+gulp.task('build-jsx', function() {
+  return gulp.src('source/javascript/**/*.jsx')
+    .pipe(sourcemaps.init())
+    .pipe(react())
     .pipe(uglify())
     .pipe(concat(app.name + '-'+app.jsBundlePrefix+'.js'))
     .pipe(insert.prepend('//'+app.origin+'\n'))
