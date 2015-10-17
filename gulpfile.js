@@ -6,7 +6,8 @@ var app = require('./app.json'),
     uglify = require('gulp-uglify'),
     babel = require('gulp-babel'),
     sourcemaps = require('gulp-sourcemaps'),
-    git = require('gulp-git');
+    git = require('gulp-git'),
+    XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
 
 //tasks not related to code
 var adminTasks = [
@@ -103,17 +104,29 @@ gulp.task('quickbase-push', function() {
     action: "API_AddReplaceDBPage"
   };
 
-  console.log(url);
-  console.log(data);
-
-  req.onreadystatechange = function() {
-    if(req.readyState == 4 && req.status == 200) {
-      console.log(req.responseText);
+  gulp.start("build-qb-call", function(call){
+    console.log(call);
+    req.onreadystatechange = function() {
+      if(req.readyState == 4 && req.status == 200) {
+        console.log(req.responseText);
+      };
     };
+
+    req.setRequestHeader("Content-Type", "text/xml");
+    req.send(data);
+  });
+});
+
+gulp.task('build-qb-call', function() {
+  var postData = ["<qdbapi>"];
+  postData.push("<ticket></ticket>");
+
+  if(app.token){
+    postData.push("<apptoken>" + app.token + "</apptoken>");
   };
 
-  req.setRequestHeader("Content-Type", "text/xml");
-  req.send(data);
+  postData.push("</qdbapi>");
+  return postData.join("");
 });
 
 //manually trigger deployment
