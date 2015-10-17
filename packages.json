@@ -1,13 +1,28 @@
 {
-  "version": "0.0.0",
+  "name": "BaseJSGulp",
+  "version": "0.0.1",
+  "description": "QuickBase App Builder",
+  "engines": {
+    "node": "0.12.2",
+    "npm": "2.7.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KitHensel/BaseJSGulp.git"
+  },
   "dependencies": {
-    "gulp": "*",
-    "gulp-babel": "*",
-    "gulp-concat": "*",
-    "gulp-git": "*",
-    "gulp-sass": "*",
-    "gulp-sourcemaps": "*",
-    "gulp-uglify": "*",
-    "gulp-util": "*"
+    "gulp": "^3.9.0",
+    "xmlhttprequest": "^2.3.1",
+    "pixl-xml": "^1.2.1",
+    "gulp-sass": "",
+    "gulp-concat": "",
+    "gulp-uglify": "",
+    "gulp-babel": "",
+    "gulp-react": "",
+    "gulp-sourcemaps": "",
+    "gulp-rename": "",
+    "gulp-insert": "",
+    "gulp-git": "",
+    "require-dir": "",
   }
 }

@@ -2,11 +2,6 @@ var app 	     = require('../../app')
 var gulp       = require('gulp')
 var sass       = require('gulp-sass')
 var concat     = require('gulp-concat')
-var uglify     = require('gulp-uglify')
-var babel      = require('gulp-babel')
-var react      = require('gulp-react')
-var sourcemaps = require('gulp-sourcemaps')
-var rename     = require('gulp-rename')
 var insert     = require('gulp-insert')
 
 //compile scss
