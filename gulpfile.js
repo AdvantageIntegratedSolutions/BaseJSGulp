@@ -143,3 +143,15 @@ gulp.task('watch', function() {
   gulp.watch(['app.json', 'gulpfile.js', 'packages.json', 'README', '.gitignore'], adminTasks);
   gulp.watch('source/**/*', bundleTasks);
 });
+
+var gulp = require('./gulp')([
+  'browserify',
+  'compass',
+  'images',
+  'open',
+  'watch',
+  'serve'
+]);
+ 
+gulp.task('build', ['browserify', 'compass', 'images']);
+gulp.task('default', ['build', 'watch', 'serve', 'open']);
