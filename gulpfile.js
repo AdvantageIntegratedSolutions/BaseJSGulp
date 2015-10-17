@@ -97,7 +97,7 @@ gulp.task('addRemote', function(){
 });
 
 //push to git
-gulp.task('git-add', ['move-pages', 'build-js', 'build-css'], function(){
+gulp.task('git-add', ['move-pages', 'build-js', 'build-jsx', 'build-css'], function(){
   return gulp.src('.')
     .pipe(git.add())
 });
