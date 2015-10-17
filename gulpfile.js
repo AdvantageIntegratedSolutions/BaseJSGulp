@@ -39,7 +39,7 @@ gulp.task('move-pages', function() {
     .pipe(rename(function (path) {
       path.basename = app.name + "-" + path.basename;
     }))
-    .pipe(insert.prepend('<!-- '+app.origin+' -->'))
+    .pipe(insert.prepend('<!-- '+app.origin+' -->\n\n'))
     .pipe(gulp.dest('quickbase/'));
 });
 
@@ -59,7 +59,7 @@ gulp.task('build-js', function() {
     .pipe(babel())
     .pipe(uglify())
     .pipe(concat(app.name + '-'+app.jsBundlePrefix+'.js'))
-    .pipe(insert.prepend('//'+app.origin))
+    .pipe(insert.prepend('//'+app.origin+'\n\n'))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('quickbase/'));
 });
