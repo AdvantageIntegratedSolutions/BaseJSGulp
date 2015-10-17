@@ -97,8 +97,7 @@ gulp.task('quickbase-push', function() {
 
   var data = {
     dbid: app.dbid,
-    action: "API_AddReplaceDBPage",
-    params: {"query": query}
+    action: "API_AddReplaceDBPage"
   };
 
   this.xmlPost = function(dbid, tableName, action, data, callback, handler){
