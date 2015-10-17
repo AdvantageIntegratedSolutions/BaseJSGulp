@@ -50,7 +50,7 @@ gulp.task('build-css', function() {
 gulp.task('build-js', function() {
   return gulp.src('source/javascript/**/*.js')
     .pipe(sourcemaps.init())
-    .pipe(concat(app.name + '.js'))
+    //.pipe(concat(app.name + '.js'))
     .pipe(babel())
     .pipe(uglify())
     .pipe(sourcemaps.write())
