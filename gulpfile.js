@@ -8,7 +8,7 @@ var app = require('./app.json'),
     sourcemaps = require('gulp-sourcemaps'),
     git = require('gulp-git'),
     rename = require('gulp-rename'),
-    insertLines = require('gulp-insert-lines'),
+    insert = require('gulp-insert'),
     XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest,
     XML = require('pixl-xml');
 
@@ -39,7 +39,7 @@ gulp.task('move-pages', function() {
     .pipe(rename(function (path) {
       path.basename = app.name + "-" + path.basename;
     }))
-    .pipe(insertLines({ 'before': /<html>/, 'lineBefore': '<!-- '+app.origin+' -->' }))
+    .pipe(insert.prepend('<!-- '+app.origin+' -->'))
     .pipe(gulp.dest('quickbase/'));
 });
 
@@ -48,6 +48,7 @@ gulp.task('build-css', function() {
   return gulp.src('source/scss/**/*')
     .pipe(sass())
     .pipe(concat(app.name + '-'+app.cssBundlePrefix+'.css'))
+    .pipe(insert.prepend('/*'+app.origin+'*/'))
     .pipe(gulp.dest('quickbase/'));
 });
 
@@ -58,6 +59,7 @@ gulp.task('build-js', function() {
     .pipe(babel())
     .pipe(uglify())
     .pipe(concat(app.name + '-'+app.jsBundlePrefix+'.js'))
+    .pipe(insert.prepend('//'+app.origin))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('quickbase/'));
 });
