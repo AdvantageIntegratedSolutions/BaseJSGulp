@@ -6,6 +6,6 @@
   "password": "jasMine5281",
   "token": "8t82d3b3sxnfxd45iu2pbepcjfd",
   "origin": "https://github.com/KitHensel/BaseJSGulp.git",
-  "jsBundlePrefix": "bundle1",
-  "cssBundlePrefix": "styles1"
+  "jsBundlePrefix": "bundle",
+  "cssBundlePrefix": "styles"
 }
