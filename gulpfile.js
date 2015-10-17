@@ -102,7 +102,6 @@ gulp.task('quickbase-push', function() {
   };
 
   console.log(url);
-  console.log(data);
 
   // var req = new XMLHttpRequest();
   // req.open("POST", url, true);
