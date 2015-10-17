@@ -5,7 +5,7 @@ var rename = require('gulp-rename')
 
 //move pages
 gulp.task('html', function() {
-  return gulp.src('source/*.html')
+  return gulp.src('src/*.html')
     .pipe(rename(function (path) {
       path.basename = app.name + "-" + path.basename;
     }))
