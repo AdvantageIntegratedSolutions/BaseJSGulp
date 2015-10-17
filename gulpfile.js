@@ -93,7 +93,7 @@ gulp.task('git-push', ['git-commit'], function() {
 //push to QuickBase App
 gulp.task('quickbase-push', function() {
 
-  var url = "https://" + app.realm + ".quickbase.com/db/" + app + "?act=API_AddReplaceDBPage";
+  var url = "https://" + app.realm + ".quickbase.com/db/" + app.dbid + "?act=API_AddReplaceDBPage";
 
   gutil.log(url);
   // this.xmlPost = function(dbid, tableName, action, data, callback, handler){
