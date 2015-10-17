@@ -71,7 +71,6 @@ gulp.task('build-jsx', function() {
   return gulp.src('source/javascript/**/*.jsx')
     .pipe(sourcemaps.init())
     .pipe(react())
-    .pipe(uglify())
     .pipe(concat(app.name + '-'+app.jsBundlePrefix+'.js'))
     .pipe(insert.prepend('//'+app.origin+'\n'))
     .pipe(sourcemaps.write())
