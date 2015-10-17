@@ -8,6 +8,7 @@ var app = require('./app.json'),
     sourcemaps = require('gulp-sourcemaps'),
     git = require('gulp-git'),
     rename = require('gulp-rename'),
+    insertLines = require('gulp-insert-lines'),
     XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest,
     XML = require('pixl-xml');
 
@@ -37,6 +38,10 @@ gulp.task('move-pages', function() {
   return gulp.src('source/*.html')
     .pipe(rename(function (path) {
       path.basename = app.name + "-" + path.basename;
+    }))
+    .pipe(insertLines({
+      'before': /<\/html>$/,
+      'lineBefore': 'hello world'
     }))
     .pipe(gulp.dest('quickbase/'));
 });
