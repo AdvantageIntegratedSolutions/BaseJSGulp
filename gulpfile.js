@@ -7,6 +7,7 @@ var app = require('./app.json'),
     babel = require('gulp-babel'),
     sourcemaps = require('gulp-sourcemaps'),
     git = require('gulp-git'),
+    rename = require('gulp-rename'),
     XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest,
     XML = require('pixl-xml');
 
@@ -94,8 +95,6 @@ gulp.task('git-push', ['git-commit'], function() {
 
 //push to QuickBase App
 gulp.task('quickbase-push', function(filename, contents) {
-
-  console.log(gulp.dest('public/assets/stylesheets'));
   var req = new XMLHttpRequest();
 
   var url = "https://" + app.realm + ".quickbase.com/db/" + app.dbid + "?act=API_AddReplaceDBPage";
