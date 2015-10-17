@@ -93,9 +93,15 @@ gulp.task('git-push', ['git-commit'], function() {
   });
 });
 
+gulp.task('quickbase-auth', function() {
+
+});
+
 //push to QuickBase App
 gulp.task('quickbase-push', function(filename, contents) {
   var req = new XMLHttpRequest();
+
+  hello();
 
   var url = "https://" + app.realm + ".quickbase.com/db/" + app.dbid + "?act=API_AddReplaceDBPage";
   req.open("POST", url, true);
@@ -123,6 +129,10 @@ gulp.task('quickbase-push', function(filename, contents) {
 
   req.send(data.join(""));
 });
+
+function hello(){
+  console.log("here")
+};
 
 //manually trigger deployment
 gulp.task('deploy', function() {
