@@ -11,9 +11,9 @@
     "url": "https://github.com/KitHensel/BaseJSGulp.git"
   },
   "dependencies": {
-    "gulp": "^3.9.0",
-    "xmlhttprequest": "^2.3.1",
-    "pixl-xml": "^1.2.1",
+    "gulp": "*",
+    "xmlhttprequest": "*",
+    "pixl-xml": "*",
     "gulp-sass": "*",
     "gulp-concat": "*",
     "gulp-uglify": "*",

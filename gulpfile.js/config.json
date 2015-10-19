@@ -1,0 +1,23 @@
+{
+  "root": {
+    "src": "./src",
+    "dest": "./qb-pages"
+  },
+
+  "tasks": {
+    "js": {
+      "src": "javascripts",
+      "extensions": ["js", "jsx"]
+    },
+
+    "css": {
+      "src": "stylesheets",
+      "extensions": ["sass", "scss", "css"]
+    },
+
+    "html": {
+      "src": "html",
+      "extensions": ["html", "json"]
+    }
+  }
+}
