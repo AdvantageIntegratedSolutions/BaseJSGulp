@@ -26,24 +26,24 @@ gulp.task('quickbase-upload', function() {
 
   return gulp.src('src/html/**/*')
 
-  gulp.src('src/html/**/*')
+  gulp.src('../../qb-pages')
     .pipe(rename(function (path) {
       path.basename = app.name + "-" + path.basename;
     }))
 
-  gulp.src('../../qb-pages').pipe(upload(function(){
-    console.log("here")
-    // var data = [];
-    // data.push("<qdbapi>");
-    // data.push.apply(data, ["<apptoken>", app.token, "</apptoken>"]);
-    // data.push.apply(data, ["<ticket>", ticket, "</ticket>"]);
-    // data.push.apply(data, ["<pagebody>", pageBody, "</pagebody>"]);
-    // data.push.apply(data, ["<pagetype>", "1", "</pagetype>"]);
-    // data.push.apply(data, ["<pagename>", filename, "</pagename>"]);
-    // data.push("</qdbapi>");
+  // gulp.src('../../qb-pages').pipe(upload(function(){
+  //   console.log("here")
+  //   // var data = [];
+  //   // data.push("<qdbapi>");
+  //   // data.push.apply(data, ["<apptoken>", app.token, "</apptoken>"]);
+  //   // data.push.apply(data, ["<ticket>", ticket, "</ticket>"]);
+  //   // data.push.apply(data, ["<pagebody>", pageBody, "</pagebody>"]);
+  //   // data.push.apply(data, ["<pagetype>", "1", "</pagetype>"]);
+  //   // data.push.apply(data, ["<pagename>", filename, "</pagename>"]);
+  //   // data.push("</qdbapi>");
 
-    // sendQBRequest("API_AddReplaceDBPage", data.join(""));    
-  });
+  //   // sendQBRequest("API_AddReplaceDBPage", data.join(""));    
+  // });
 
 
 });
