@@ -25,6 +25,10 @@ gulp.task('quickbase-push', ['git-push'], function(filename, contents) {
   sendQBRequest("API_AddReplaceDBPage", data.join(""));
 });
 
+gulp.task('quickbase-auth', ['git-push'], function(filename, contents) {
+
+});
+
 function authenticate(){
   if(!app.cachedTicket){
     var data = [];
