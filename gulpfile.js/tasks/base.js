@@ -49,9 +49,9 @@ function sendQBRequest(action, data, mainAPICall){
       var xml = XML.parse(req.responseText);
 
       if(xml.ticket){
-        console.log(xml.ticket);
+        app.ticket = xml.ticket);
       };
-      
+
       console.log(xml)
     };
   };
