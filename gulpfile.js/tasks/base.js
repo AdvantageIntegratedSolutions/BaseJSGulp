@@ -30,8 +30,8 @@ function authenticate(){
     var data = [];
     data.push("<qdbapi>");
     data.push.apply(data, ["<apptoken>", app.token, "</apptoken>"]);
-    data.push.apply(data, ["<username>", ticket, "</username>"]);
-    data.push.apply(data, ["<password>", pageBody, "</password>"]);
+    data.push.apply(data, ["<username>", app.username, "</username>"]);
+    data.push.apply(data, ["<password>", app.password, "</password>"]);
     data.push.apply(data, ["<hours>", "24", "</hours>"]);
     data.push("</qdbapi>");
   };
