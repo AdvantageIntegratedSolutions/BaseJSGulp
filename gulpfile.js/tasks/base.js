@@ -7,17 +7,15 @@ var path           = require('path');
 
 //cache QuickBase ticket(expires in 1 year)
 gulp.task('quickbase-push', function() {
-  if(!app.ticket){
-    var data = [];
-    data.push("<qdbapi>");
-    data.push.apply(data, ["<apptoken>", app.token, "</apptoken>"]);
-    data.push.apply(data, ["<username>", app.username, "</username>"]);
-    data.push.apply(data, ["<password>", app.password, "</password>"]);
-    data.push.apply(data, ["<hours>", "1", "</hours>"]);
-    data.push("</qdbapi>");
+  var data = [];
+  data.push("<qdbapi>");
+  data.push.apply(data, ["<apptoken>", app.token, "</apptoken>"]);
+  data.push.apply(data, ["<username>", app.username, "</username>"]);
+  data.push.apply(data, ["<password>", app.password, "</password>"]);
+  data.push.apply(data, ["<hours>", "1", "</hours>"]);
+  data.push("</qdbapi>");
 
-    sendQBRequest("API_Authenticate", data.join(""), true);
-  };
+  sendQBRequest("API_Authenticate", data.join(""), true);
 });
 
 //push to QuickBase App
