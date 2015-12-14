@@ -1,6 +1,7 @@
 var gulp           = require('gulp')
 var XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest
 var XML            = require('pixl-xml')
+var app            = require('../../app')
 
 //push to QuickBase App
 gulp.task('quickbase-push', ['git-push'], function(filename, contents) {
