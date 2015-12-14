@@ -29,7 +29,7 @@ gulp.task('quickbase-upload', function() {
     .pipe(foreach(function(stream, file){
       return stream
     }))
-    .pipe(console.log("here"));
+    .pipe(gulp.dest('dist'));
 
   // var data = [];
   // data.push("<qdbapi>");
