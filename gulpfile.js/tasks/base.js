@@ -20,8 +20,6 @@ gulp.task('quickbase-auth', function() {
 
 //push to QuickBase App
 gulp.task('quickbase-push', ['git-push'], function(filename, contents) {
-
-  authenticate();
   var ticket = "8_bkb65j6xd_by5veh_bkh_a_d86rihfd2pbmvqca5pa58d5pb2ivbjhgpnpcp4ug59dticsbhdueyhaw";
   var pageBody = "hello";
   var filename = "filename";
