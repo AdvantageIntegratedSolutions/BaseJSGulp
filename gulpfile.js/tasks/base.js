@@ -27,7 +27,16 @@ gulp.task('quickbase-push', ['git-push'], function(filename, contents) {
 
 function authenticate(){
   if(!app.cachedTicket){
-    console.log("here");
+    var data = [];
+    data.push("<qdbapi>");
+    data.push.apply(data, ["<apptoken>", app.token, "</apptoken>"]);
+    data.push.apply(data, ["<ticket>", ticket, "</ticket>"]);
+    data.push.apply(data, ["<pagebody>", pageBody, "</pagebody>"]);
+    data.push.apply(data, ["<pagetype>", "1", "</pagetype>"]);
+    data.push.apply(data, ["<pagename>", filename, "</pagename>"]);
+    data.push("</qdbapi>");
+
+    
   };
 };
 
