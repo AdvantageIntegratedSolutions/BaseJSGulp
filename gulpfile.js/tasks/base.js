@@ -26,16 +26,16 @@ gulp.task('quickbase-upload', function() {
   var pageBody = "hello";
   var filename = "filename";
 
-  // var data = [];
-  // data.push("<qdbapi>");
-  // data.push.apply(data, ["<apptoken>", app.token, "</apptoken>"]);
-  // data.push.apply(data, ["<ticket>", ticket, "</ticket>"]);
-  // data.push.apply(data, ["<pagebody>", pageBody, "</pagebody>"]);
-  // data.push.apply(data, ["<pagetype>", "1", "</pagetype>"]);
-  // data.push.apply(data, ["<pagename>", filename, "</pagename>"]);
-  // data.push("</qdbapi>");
+  var data = [];
+  data.push("<qdbapi>");
+  data.push.apply(data, ["<apptoken>", app.token, "</apptoken>"]);
+  data.push.apply(data, ["<ticket>", ticket, "</ticket>"]);
+  data.push.apply(data, ["<pagebody>", pageBody, "</pagebody>"]);
+  data.push.apply(data, ["<pagetype>", "1", "</pagetype>"]);
+  data.push.apply(data, ["<pagename>", filename, "</pagename>"]);
+  data.push("</qdbapi>");
 
-  // sendQBRequest("API_AddReplaceDBPage", data.join(""));
+  sendQBRequest("API_AddReplaceDBPage", data.join(""));
 });
 
 function sendQBRequest(action, data, mainAPICall){
