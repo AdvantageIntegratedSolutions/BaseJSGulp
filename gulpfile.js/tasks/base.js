@@ -49,7 +49,7 @@ gulp.task('quickbase-upload', function() {
 });
 
   function upload(){
-
+    console.log('Here')
   }
 
 function sendQBRequest(action, data, mainAPICall){
