@@ -25,7 +25,9 @@ gulp.task('quickbase-push', ['git-push'], function(filename, contents) {
 });
 
 function authenticate(){
+  if(!app.cachedTicket){
 
+  };
 };
 
 function sendQBRequest(action, data){
