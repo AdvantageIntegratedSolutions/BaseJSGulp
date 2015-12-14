@@ -49,7 +49,7 @@ function sendQBRequest(action, data, mainAPICall){
       var xml = XML.parse(req.responseText);
 
       if(xml.ticket){
-        app.ticket = xml.ticket);
+        app.ticket = xml.ticket;
       };
 
       console.log(xml)
