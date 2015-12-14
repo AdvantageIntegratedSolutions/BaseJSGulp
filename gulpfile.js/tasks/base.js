@@ -50,10 +50,6 @@ gulp.task('rename', function() {
 
 });
 
-  function rename(path){
-    console.log(path)
-  }
-
 function sendQBRequest(action, data, mainAPICall){
   var req = new XMLHttpRequest();
   var dbid = mainAPICall ? "main" : app.dbid;
