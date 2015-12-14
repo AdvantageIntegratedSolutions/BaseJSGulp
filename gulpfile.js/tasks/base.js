@@ -35,7 +35,7 @@ gulp.task('quickbase-upload', function() {
       data.push("<qdbapi>");
       data.push.apply(data, ["<apptoken>", app.token, "</apptoken>"]);
       data.push.apply(data, ["<ticket>", ticket, "</ticket>"]);
-      data.push.apply(data, ["<pagebody>", file.contents, "</pagebody>"]);
+      data.push.apply(data, ["<pagebody>", contents, "</pagebody>"]);
       data.push.apply(data, ["<pagetype>", "1", "</pagetype>"]);
       data.push.apply(data, ["<pagename>", filename, "</pagename>"]);
       data.push("</qdbapi>");
