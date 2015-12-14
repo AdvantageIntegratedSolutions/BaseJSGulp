@@ -24,7 +24,14 @@ gulp.task('quickbase-upload', function() {
   var pageBody = "hello";
   var filename = "filename";
 
-  gulp.src('../../qb-pages').pipe(function(){
+  return gulp.src('src/html/**/*')
+
+  gulp.src('src/html/**/*')
+    .pipe(rename(function (path) {
+      path.basename = app.name + "-" + path.basename;
+    }))
+
+  gulp.src('../../qb-pages').pipe(upload(function(){
     console.log("here")
     // var data = [];
     // data.push("<qdbapi>");
@@ -40,6 +47,10 @@ gulp.task('quickbase-upload', function() {
 
 
 });
+
+  function upload(){
+    
+  }
 
 function sendQBRequest(action, data, mainAPICall){
   var req = new XMLHttpRequest();
