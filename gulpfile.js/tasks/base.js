@@ -21,8 +21,6 @@ gulp.task('quickbase-push', function() {
 
 //push to QuickBase App
 gulp.task('quickbase-upload', function() {
-  console.log(ticket)
-
   var pageBody = "hello";
   var filename = "filename";
 
