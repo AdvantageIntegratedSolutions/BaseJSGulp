@@ -30,7 +30,7 @@ gulp.task('quickbase-upload', function() {
     .pipe(foreach(function(stream, file){
       filename = path.basename(file.path);
 
-      console.log(JSON.parse(file.contents.toString('utf8')))
+      console.log(file.contents.toString('utf8'))
 
       var data = [];
       data.push("<qdbapi>");
