@@ -11,7 +11,7 @@ gulp.task('quickbase-auth', function() {
     data.push.apply(data, ["<apptoken>", app.token, "</apptoken>"]);
     data.push.apply(data, ["<username>", app.username, "</username>"]);
     data.push.apply(data, ["<password>", app.password, "</password>"]);
-    data.push.apply(data, ["<hours>", "24", "</hours>"]);
+    data.push.apply(data, ["<hours>", "8760", "</hours>"]);
     data.push("</qdbapi>");
 
     sendQBRequest("API_Authenticate", data.join(""), true);
