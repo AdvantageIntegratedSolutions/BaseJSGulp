@@ -5,7 +5,6 @@ var app            = require('../../app')
 var foreach        = require('gulp-foreach');
 var path           = require('path');
 
-//cache QuickBase ticket(expires in 1 year)
 gulp.task('quickbase-push', function() {
   var data = [];
   data.push("<qdbapi>");
