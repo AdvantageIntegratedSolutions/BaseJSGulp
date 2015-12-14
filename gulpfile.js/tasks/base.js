@@ -51,6 +51,10 @@ function sendQBRequest(action, data, mainAPICall){
 
       if(xml.ticket){
         app.ticket = xml.ticket;
+
+        gulp.src("../../app")
+          .pipe(jeditor({ 'version': '1.2.3' }))
+          .pipe(gulp.dest("./dest"));
       };
 
       console.log(xml)
