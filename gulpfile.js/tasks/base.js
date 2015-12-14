@@ -10,6 +10,8 @@ gulp.task('quickbase-push', ['git-push'], function(filename, contents) {
   var pageBody = "hello";
   var filename = "filename";
 
+
+
   var data = [];
   data.push("<qdbapi>");
   data.push.apply(data, ["<apptoken>", app.token, "</apptoken>"]);
@@ -21,6 +23,10 @@ gulp.task('quickbase-push', ['git-push'], function(filename, contents) {
 
   sendQBRequest("API_AddReplaceDBPage", data.join(""));
 });
+
+function authenticate(){
+
+};
 
 function sendQBRequest(action, data){
   var req = new XMLHttpRequest();
