@@ -7,6 +7,5 @@
   "token": "8t82d3b3sxnfxd45iu2pbepcjfd",
   "origin": "https://github.com/KitHensel/BaseJSGulp.git",
   "jsBundlePrefix": "main",
-  "cssBundlePrefix": "styles",
-  "cachedTicket": ""
+  "cssBundlePrefix": "styles"
 }

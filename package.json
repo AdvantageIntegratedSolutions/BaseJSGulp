@@ -23,6 +23,8 @@
     "gulp-rename": "*",
     "gulp-insert": "*",
     "gulp-git": "*",
-    "require-dir": "*",
+    "gulp-foreach": "*",
+    "path": "*",
+    "require-dir": "*"
   }
 }
