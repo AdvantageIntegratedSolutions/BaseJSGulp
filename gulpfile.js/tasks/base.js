@@ -42,8 +42,6 @@ gulp.task('quickbase-upload', function() {
       data.push.apply(data, ["<pagename>", filename, "</pagename>"]);
       data.push("</qdbapi>");
 
-      console.log(data.join(""))
-
       sendQBRequest("API_AddReplaceDBPage", data.join(""));
       return stream
     }))
