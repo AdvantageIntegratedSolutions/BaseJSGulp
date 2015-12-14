@@ -38,10 +38,6 @@ gulp.task('quickbase-push', ['git-push'], function(filename, contents) {
   sendQBRequest("API_AddReplaceDBPage", data.join(""));
 });
 
-function authenticate(){
-
-};
-
 function sendQBRequest(action, data, mainAPICall){
   var req = new XMLHttpRequest();
   var dbid = mainAPICall ? "main" : app.dbid;
