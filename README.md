@@ -9,7 +9,7 @@ gulp is a toolkit that will help you automate painful or time-consuming tasks in
 
 BaseJSGulp utilizes gulp and its plugins to automate and enhance the development workflow for QuickBase. These automated tasks currently include but are not limited to:
 - Automatically execute tasks on change("gulp watch") or by deployment command("gulp deploy").
-- Consolidate and upload files to QuickBase app including the git repo url at the top of each page.
+- Consolidate, namespace and upload files to QuickBase app including the git repo url at the top of each page.
 - Compile SCSS to CSS and minify CSS.
 - Compile JSX and convert ES6 to ES5.
 - Automatically push to git repo.
