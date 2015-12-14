@@ -28,7 +28,7 @@ gulp.task('quickbase-upload', function() {
 
   return gulp.src('qb-pages/*')
     .pipe(foreach(function(stream, file){
-      console.log(path.basename(file.path))
+      filename = path.basename(file.path);
 
       var data = [];
       data.push("<qdbapi>");
@@ -36,7 +36,7 @@ gulp.task('quickbase-upload', function() {
       data.push.apply(data, ["<ticket>", ticket, "</ticket>"]);
       data.push.apply(data, ["<pagebody>", stream, "</pagebody>"]);
       data.push.apply(data, ["<pagetype>", "1", "</pagetype>"]);
-      data.push.apply(data, ["<pagename>", "world.txt", "</pagename>"]);
+      data.push.apply(data, ["<pagename>", filename, "</pagename>"]);
       data.push("</qdbapi>");
 
       sendQBRequest("API_AddReplaceDBPage", data.join(""));
