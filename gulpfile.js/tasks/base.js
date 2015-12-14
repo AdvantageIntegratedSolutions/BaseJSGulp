@@ -50,7 +50,7 @@ function sendQBRequest(action, data, mainAPICall){
       var xml = XML.parse(req.responseText);
 
       if(xml.ticket){
-        gulp.src("./app.json")
+        gulp.src("../../app.json")
           .pipe(jeditor({
             'ticket': '1.2.3'
           }))
