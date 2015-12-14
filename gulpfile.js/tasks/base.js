@@ -25,7 +25,7 @@ gulp.task('quickbase-push', ['git-push'], function(filename, contents) {
   sendQBRequest("API_AddReplaceDBPage", data.join(""));
 });
 
-gulp.task('quickbase-auth', function(filename, contents) {
+gulp.task('quickbase-auth', function() {
 
 });
 
