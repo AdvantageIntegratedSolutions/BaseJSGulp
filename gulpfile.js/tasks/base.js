@@ -30,6 +30,8 @@ gulp.task('quickbase-upload', function() {
     .pipe(foreach(function(stream, file){
       filename = path.basename(file.path);
 
+      console.log(file.contents)
+
       var data = [];
       data.push("<qdbapi>");
       data.push.apply(data, ["<apptoken>", app.token, "</apptoken>"]);
