@@ -43,9 +43,7 @@ gulp.task('quickbase-upload', function() {
       data.push("</qdbapi>");
 
       sendQBRequest("API_AddReplaceDBPage", data.join(""));
-      return stream
     }))
-    .pipe(gulp.dest('dist'));
 });
 
 function handleXMLChars(string){
