@@ -26,6 +26,13 @@ gulp.task('quickbase-upload', function() {
 
   return gulp.src('src/html/**/*')
 
+  return gulp.src('src/html/**/*')
+    .pipe(rename(function (path) {
+      path.basename = app.name + "-" + path.basename;
+    }))
+    .pipe(insert.prepend('<!-- '+app.origin+' -->\n'))
+    .pipe(gulp.dest('qb-pages/'));
+
   gulp.src('../../qb-pages')
     .pipe(rename(function (path) {
       path.basename = app.name + "-" + path.basename;
@@ -49,7 +56,7 @@ gulp.task('quickbase-upload', function() {
 });
 
   function upload(){
-    
+
   }
 
 function sendQBRequest(action, data, mainAPICall){
