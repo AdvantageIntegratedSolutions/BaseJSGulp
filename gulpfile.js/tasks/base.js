@@ -39,7 +39,7 @@ function authenticate(){
   };
 };
 
-function sendQBRequest(action, data, main){
+function sendQBRequest(action, data, mainAPICall){
   var req = new XMLHttpRequest();
 
   var url = "https://" + app.realm + ".quickbase.com/db/" + app.dbid + "?act=" + action;
