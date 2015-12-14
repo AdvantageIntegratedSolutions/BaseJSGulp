@@ -41,7 +41,7 @@ function authenticate(){
 
 function sendQBRequest(action, data, mainAPICall){
   var req = new XMLHttpRequest();
-  var dbid = mainAPICall || app.dbid;
+  var dbid = if mainAPICall ? "main" : app.dbid;
 
   var url = "https://" + app.realm + ".quickbase.com/db/" + dbid + "?act=" + action;
   req.open("POST", url, true);
