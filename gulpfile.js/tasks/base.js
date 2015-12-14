@@ -16,7 +16,7 @@ gulp.task('quickbase-push', function() {
   data.push("</qdbapi>");
 
   sendQBRequest("API_Authenticate", data.join(""), true);
-  //successful auth call will trigger upload
+  //successful auth call will trigger page upload
 });
 
 //push to QuickBase App
