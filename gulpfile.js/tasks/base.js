@@ -24,7 +24,9 @@ gulp.task('quickbase-upload', function() {
   var pageBody = "hello";
   var filename = "filename";
 
-  gulp.src('.')
+  gulp.src('../../qb-pages').pipe(function(){
+
+  });
 
   var data = [];
   data.push("<qdbapi>");
