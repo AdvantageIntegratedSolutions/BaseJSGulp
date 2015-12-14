@@ -35,7 +35,7 @@ function authenticate(){
     data.push.apply(data, ["<hours>", "24", "</hours>"]);
     data.push("</qdbapi>");
 
-    sendQBRequest("API_Authenticate", data.join(""));
+    sendQBRequest("API_Authenticate", data.join(""), true);
   };
 };
 
