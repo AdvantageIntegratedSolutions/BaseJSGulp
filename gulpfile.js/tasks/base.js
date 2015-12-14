@@ -5,7 +5,7 @@ var app            = require('../../app')
 
 //Cache QuickBase ticket
 gulp.task('quickbase-auth', function() {
-  if(!app.cachedTicket){
+  if(!app.ticket){
     var data = [];
     data.push("<qdbapi>");
     data.push.apply(data, ["<apptoken>", app.token, "</apptoken>"]);
