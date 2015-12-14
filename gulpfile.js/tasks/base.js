@@ -2,7 +2,7 @@ var gulp           = require('gulp')
 var XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest
 var XML            = require('pixl-xml')
 var app            = require('../../app')
-var jeditor        = require("gulp-json-editor");
+var jeditor        = require('gulp-json-editor');
 
 //Cache QuickBase ticket
 gulp.task('quickbase-auth', function() {
