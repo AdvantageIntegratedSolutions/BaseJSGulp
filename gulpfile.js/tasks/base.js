@@ -54,7 +54,7 @@ function sendQBRequest(action, data, mainAPICall){
           .pipe(jeditor({
             'ticket': '1.2.3'
           }))
-          .pipe(gulp.dest("./dest"));
+          .pipe(gulp.dest("../.."));
       };
     };
   };
