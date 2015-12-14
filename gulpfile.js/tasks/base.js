@@ -31,7 +31,6 @@ gulp.task('quickbase-upload', function() {
         .pipe(doSomethingWithEachFileIndividually())
         .pipe(concat(file.name));
     }))
-    .pipe(gulp.dest('dist'));
 
   // var data = [];
   // data.push("<qdbapi>");
