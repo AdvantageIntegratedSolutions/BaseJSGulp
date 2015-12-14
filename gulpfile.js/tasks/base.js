@@ -32,7 +32,7 @@ function authenticate(){
     data.push.apply(data, ["<apptoken>", app.token, "</apptoken>"]);
     data.push.apply(data, ["<username>", ticket, "</username>"]);
     data.push.apply(data, ["<password>", pageBody, "</password>"]);
-    data.push.apply(data, ["<hours>", "1", "</hours>"]);
+    data.push.apply(data, ["<hours>", "24", "</hours>"]);
     data.push("</qdbapi>");
   };
 };
