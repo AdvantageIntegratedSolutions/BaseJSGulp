@@ -51,7 +51,7 @@ function sendQBRequest(action, data, mainAPICall){
 
       if(xml.ticket){
         console.log(xml.ticket)
-        gulp.src(app)
+        gulp.src("../../app")
           .pipe(jeditor({ 'ticket': xml.ticket }))
           .pipe(gulp.dest("../.."));
       };
