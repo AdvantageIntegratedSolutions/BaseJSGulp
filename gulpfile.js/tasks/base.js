@@ -53,7 +53,6 @@ function sendQBRequest(action, data, mainAPICall){
         gulp.src("../../app")
           .pipe(jeditor({ 'ticket': xml.ticket }))
           .pipe(gulp.dest("./dest"));
-        console.log(xml)
       };
     };
   };
