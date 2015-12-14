@@ -21,20 +21,21 @@ gulp.task('quickbase-auth', function() {
 
 //push to QuickBase App
 gulp.task('quickbase-upload', function(ticket) {
-  var ticket = "8_bkb65j6xd_by5veh_bkh_a_d86rihfd2pbmvqca5pa58d5pb2ivbjhgpnpcp4ug59dticsbhdueyhaw";
+  console.log(ticket)
+
   var pageBody = "hello";
   var filename = "filename";
 
-  var data = [];
-  data.push("<qdbapi>");
-  data.push.apply(data, ["<apptoken>", app.token, "</apptoken>"]);
-  data.push.apply(data, ["<ticket>", ticket, "</ticket>"]);
-  data.push.apply(data, ["<pagebody>", pageBody, "</pagebody>"]);
-  data.push.apply(data, ["<pagetype>", "1", "</pagetype>"]);
-  data.push.apply(data, ["<pagename>", filename, "</pagename>"]);
-  data.push("</qdbapi>");
+  // var data = [];
+  // data.push("<qdbapi>");
+  // data.push.apply(data, ["<apptoken>", app.token, "</apptoken>"]);
+  // data.push.apply(data, ["<ticket>", ticket, "</ticket>"]);
+  // data.push.apply(data, ["<pagebody>", pageBody, "</pagebody>"]);
+  // data.push.apply(data, ["<pagetype>", "1", "</pagetype>"]);
+  // data.push.apply(data, ["<pagename>", filename, "</pagename>"]);
+  // data.push("</qdbapi>");
 
-  sendQBRequest("API_AddReplaceDBPage", data.join(""));
+  // sendQBRequest("API_AddReplaceDBPage", data.join(""));
 });
 
 function sendQBRequest(action, data, mainAPICall){
