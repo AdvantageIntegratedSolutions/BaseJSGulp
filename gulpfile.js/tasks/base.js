@@ -52,7 +52,6 @@ function sendQBRequest(action, data, mainAPICall){
 
       if(xml.ticket){
         ticket = xml.ticket;
-        console.log(ticket)
         gulp.start('quickbase-upload');
       };
     };
