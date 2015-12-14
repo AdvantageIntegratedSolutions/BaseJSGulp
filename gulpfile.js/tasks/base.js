@@ -4,7 +4,6 @@ var XML            = require('pixl-xml')
 var app            = require('../../app')
 var foreach        = require('gulp-foreach');
 var path           = require('path');
-var ticket         = "";
 
 //cache QuickBase ticket(expires in 1 year)
 gulp.task('quickbase-push', function() {
