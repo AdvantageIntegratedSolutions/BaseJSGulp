@@ -29,9 +29,7 @@ gulp.task('quickbase-upload', function() {
   var filename = "filename";
 
   gulp.src('../../qb-pages')
-    .pipe(rename(function (path) {
-      console.log("here")
-    }));
+    .pipe(gulp.start('rename'));
 
   // gulp.src('../../qb-pages').pipe(upload(function(){
   //   console.log("here")
