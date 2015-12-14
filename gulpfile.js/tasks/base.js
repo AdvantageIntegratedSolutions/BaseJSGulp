@@ -50,8 +50,13 @@ gulp.task('quickbase-upload', function() {
     .pipe(gulp.dest('dist'));
 });
 
-function handleXMLChars(){
-
+function handleXMLChars(string){
+  return string
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;')
 };
 
 function sendQBRequest(action, data, mainAPICall){
