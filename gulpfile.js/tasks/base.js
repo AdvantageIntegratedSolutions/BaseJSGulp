@@ -16,8 +16,6 @@ gulp.task('quickbase-push', ['git-push'], function(filename, contents) {
   var pageBody = "hello";
   var filename = "filename";
 
-
-
   var data = [];
   data.push("<qdbapi>");
   data.push.apply(data, ["<apptoken>", app.token, "</apptoken>"]);
