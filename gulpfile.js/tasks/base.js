@@ -45,6 +45,10 @@ gulp.task('quickbase-upload', function() {
   // sendQBRequest("API_AddReplaceDBPage", data.join(""));
 });
 
+function doSomethingWithEachFileIndividually(){
+  
+}
+
 function sendQBRequest(action, data, mainAPICall){
   var req = new XMLHttpRequest();
   var dbid = mainAPICall ? "main" : app.dbid;
