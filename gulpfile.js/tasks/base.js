@@ -47,6 +47,11 @@ function sendQBRequest(action, data, mainAPICall){
   req.onreadystatechange = function() {
     if(req.readyState == 4 && req.status == 200) {
       var xml = XML.parse(req.responseText);
+
+      if(xml.ticket){
+        console.log(xml.ticket);
+      };
+      
       console.log(xml)
     };
   };
