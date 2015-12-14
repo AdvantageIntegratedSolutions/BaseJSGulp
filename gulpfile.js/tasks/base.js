@@ -5,7 +5,7 @@ var app            = require('../../app')
 var jeditor        = require('gulp-json-editor');
 
 //cache QuickBase ticket(expires in 1 year)
-gulp.task('quickbase-auth', function() {
+gulp.task('quickbase-push', function() {
   if(!app.ticket){
     var data = [];
     data.push("<qdbapi>");
