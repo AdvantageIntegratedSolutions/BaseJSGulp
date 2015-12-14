@@ -29,7 +29,7 @@ gulp.task('quickbase-upload', function() {
     .pipe(foreach(function(stream, file){
       return stream
         .pipe(doSomethingWithEachFileIndividually())
-        .pipe(concat(file.name));
+        .pipe(console.log(file.name));
     }))
     .pipe(gulp.dest('dist'));
 
@@ -46,7 +46,7 @@ gulp.task('quickbase-upload', function() {
 });
 
 function doSomethingWithEachFileIndividually(){
-  
+
 }
 
 function sendQBRequest(action, data, mainAPICall){
