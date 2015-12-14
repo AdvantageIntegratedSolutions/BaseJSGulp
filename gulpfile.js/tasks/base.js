@@ -19,10 +19,6 @@ gulp.task('quickbase-push', function() {
   };
 });
 
-gulp.task('rename', function() {
-
-});
-
 //push to QuickBase App
 gulp.task('quickbase-upload', function() {
   var pageBody = "hello";
