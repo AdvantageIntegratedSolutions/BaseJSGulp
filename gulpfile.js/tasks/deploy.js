@@ -1,5 +1,6 @@
 var gulp    = require('gulp')
 var git     = require('gulp-git')
+var app     = require('../../app')
 
 var deployTasks = [
   'html',
