@@ -49,6 +49,10 @@ function sendQBRequest(action, data, mainAPICall){
     if(req.readyState == 4 && req.status == 200) {
       var xml = XML.parse(req.responseText);
 
+      console.log(jeditor({
+            'ticket': '1.2.3'
+          }))
+
       if(xml.ticket){
         gulp.src("../../app.json")
           .pipe(jeditor({
