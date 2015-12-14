@@ -25,9 +25,9 @@ gulp.task('quickbase-upload', function() {
   var pageBody = "hello";
   var filename = "filename";
 
-  gulp.src('qb-pages/*.js')
+  gulp.src('qb-pages/*')
     .pipe(foreach(function(stream, file){
-      console.log()
+      console.log(file)
     }))
 
   // var data = [];
