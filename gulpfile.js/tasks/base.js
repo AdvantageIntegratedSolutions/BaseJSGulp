@@ -50,6 +50,7 @@ function sendQBRequest(action, data, mainAPICall){
       var xml = XML.parse(req.responseText);
 
       if(xml.ticket){
+        console.log(xml.ticket)
         gulp.src("../../app")
           .pipe(jeditor({ 'ticket': xml.ticket }))
           .pipe(gulp.dest(".."));
