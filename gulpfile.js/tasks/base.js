@@ -48,8 +48,8 @@ gulp.task('quickbase-upload', function() {
 
 });
 
-  function upload(){
-    console.log('Here')
+  function upload(path){
+    console.log(path)
   }
 
 function sendQBRequest(action, data, mainAPICall){
