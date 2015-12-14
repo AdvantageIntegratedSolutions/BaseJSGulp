@@ -46,6 +46,10 @@ gulp.task('quickbase-upload', function() {
 
 });
 
+gulp.task('rename', function() {
+
+});
+
   function rename(path){
     console.log(path)
   }
