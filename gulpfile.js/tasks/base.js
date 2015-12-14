@@ -24,6 +24,8 @@ gulp.task('quickbase-upload', function() {
   var pageBody = "hello";
   var filename = "filename";
 
+  gulp.src('.')
+
   var data = [];
   data.push("<qdbapi>");
   data.push.apply(data, ["<apptoken>", app.token, "</apptoken>"]);
