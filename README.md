@@ -16,11 +16,11 @@ BaseGulp utilizes gulp and its plugins to automate and enhance the development w
 
 ## Setup
 - Clone repo, https://github.com/AdvantageIntegratedSolutions/BaseJSGulp.git
-- Fill out app.json with QuickBase settings.
+- Fill out app.json.
 - run "npm install"
 - Run either "gulp deploy" or "gulp watch" to begin automating tasks!!
 
 ## How to use?
-- "gulp deploy"(recommended) - if you want to run your tasks periodically, run "gulp deploy" and it will execute all deployment tasks.
+- "gulp deploy" - if you want to run your tasks periodically, run "gulp deploy" and it will execute all deployment tasks.
 
-- "gulp watch" - if you want to run your tasks each time you make a change to your app, run "gulp watch" in your terminal and it will execute all deployment tasks.
+- "gulp watch" - if you want to run your tasks each time you make a change to your app, run "gulp watch" in your terminal and it will execute all deployment tasks as you work in your app.
