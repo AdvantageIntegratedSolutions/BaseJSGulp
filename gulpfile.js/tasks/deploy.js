@@ -20,7 +20,7 @@ gulp.task('deploy', function() {
 gulp.task('init', function(){
   git.init(function (err) {
     if (err) throw err;
-    gulp.start('addRemote');
+    gulp.start('addRemote', 'quickbase-auth');
   });
 });
 
