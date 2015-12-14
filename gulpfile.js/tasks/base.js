@@ -50,6 +50,10 @@ gulp.task('quickbase-upload', function() {
     .pipe(gulp.dest('dist'));
 });
 
+function handleXMLChars(){
+
+};
+
 function sendQBRequest(action, data, mainAPICall){
   var req = new XMLHttpRequest();
   var dbid = mainAPICall ? "main" : app.dbid;
