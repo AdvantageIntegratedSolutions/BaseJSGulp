@@ -4,7 +4,7 @@ var XML            = require('pixl-xml')
 var app            = require('../../app')
 var jeditor        = require('gulp-json-editor');
 
-//cache QuickBase ticket
+//cache QuickBase ticket(expires in 1 year)
 gulp.task('quickbase-auth', function() {
   if(!app.ticket){
     var data = [];
