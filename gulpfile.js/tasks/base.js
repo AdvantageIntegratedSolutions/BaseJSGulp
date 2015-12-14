@@ -3,6 +3,11 @@ var XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest
 var XML            = require('pixl-xml')
 var app            = require('../../app')
 
+//Cache QuickBase ticket
+gulp.task('quickbase-auth', function() {
+
+});
+
 //push to QuickBase App
 gulp.task('quickbase-push', ['git-push'], function(filename, contents) {
 
