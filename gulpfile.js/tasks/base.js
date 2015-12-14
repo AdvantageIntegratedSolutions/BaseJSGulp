@@ -67,8 +67,6 @@ function sendQBRequest(action, data, mainAPICall){
     if(req.readyState == 4 && req.status == 200) {
       var xml = XML.parse(req.responseText);
 
-      console.log(xml)
-
       if(xml.ticket){
         ticket = xml.ticket;
         gulp.start('quickbase-upload');
