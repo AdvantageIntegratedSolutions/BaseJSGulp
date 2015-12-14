@@ -29,6 +29,14 @@ gulp.task('quickbase-upload', function() {
     console.log("here")
   });
 
+  return gulp.src('src/*.js')
+    .pipe(foreach(function(stream, file){
+      return stream
+        .pipe(doSomethingWithEachFileIndividually())
+        .pipe(concat(file.name));
+    }))
+    .pipe(gulp.dest('dist'));
+
   // var data = [];
   // data.push("<qdbapi>");
   // data.push.apply(data, ["<apptoken>", app.token, "</apptoken>"]);
