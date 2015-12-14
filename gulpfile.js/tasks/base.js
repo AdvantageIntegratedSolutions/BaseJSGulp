@@ -52,7 +52,7 @@ function sendQBRequest(action, data, mainAPICall){
       if(xml.ticket){
         gulp.src("./app.json")
           .pipe(jeditor({
-            'version': '1.2.3'
+            'ticket': '1.2.3'
           }))
           .pipe(gulp.dest("./dest"));
       };
