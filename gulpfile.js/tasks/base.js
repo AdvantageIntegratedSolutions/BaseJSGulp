@@ -5,7 +5,17 @@ var app            = require('../../app')
 
 //Cache QuickBase ticket
 gulp.task('quickbase-auth', function() {
+  if(!app.cachedTicket){
+    var data = [];
+    data.push("<qdbapi>");
+    data.push.apply(data, ["<apptoken>", app.token, "</apptoken>"]);
+    data.push.apply(data, ["<username>", app.username, "</username>"]);
+    data.push.apply(data, ["<password>", app.password, "</password>"]);
+    data.push.apply(data, ["<hours>", "24", "</hours>"]);
+    data.push("</qdbapi>");
 
+    sendQBRequest("API_Authenticate", data.join(""), true);
+  };
 });
 
 //push to QuickBase App
@@ -29,17 +39,7 @@ gulp.task('quickbase-push', ['git-push'], function(filename, contents) {
 });
 
 function authenticate(){
-  if(!app.cachedTicket){
-    var data = [];
-    data.push("<qdbapi>");
-    data.push.apply(data, ["<apptoken>", app.token, "</apptoken>"]);
-    data.push.apply(data, ["<username>", app.username, "</username>"]);
-    data.push.apply(data, ["<password>", app.password, "</password>"]);
-    data.push.apply(data, ["<hours>", "24", "</hours>"]);
-    data.push("</qdbapi>");
 
-    sendQBRequest("API_Authenticate", data.join(""), true);
-  };
 };
 
 function sendQBRequest(action, data, mainAPICall){
