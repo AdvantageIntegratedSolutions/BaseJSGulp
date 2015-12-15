@@ -21,6 +21,7 @@ BaseJSGulp utilizes gulp and its plugins to automate and enhance the development
 ```js
 {
   "name": "BaseJSGulp", //name of new app
+  "description": "", //short description of app
   "realm": "ais", //quickbase realm
   "dbid": "bkb4gyte3", //quickbase main db
   "username": "uSeRnAmE", //quickbase username
