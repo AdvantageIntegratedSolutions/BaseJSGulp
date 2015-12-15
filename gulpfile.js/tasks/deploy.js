@@ -26,8 +26,11 @@ gulp.task('init', function(){
 
 //add remote origin
 gulp.task('addRemote', function(){
-  git.addRemote('origin', app.origin, function (err) {
+  git.removeRemote('origin', function (err) {
     if (err) throw err;
+    git.addRemote('origin', app.origin, function (err) {
+      if (err) throw err;
+    });
   });
 });
 
