@@ -14,10 +14,24 @@ BaseJSGulp utilizes gulp and its plugins to automate and enhance the development
 - Compile JSX and convert ES6 to ES5.
 - Automatically push to git repo.
 
-## Setup
+## Setup new Project
 - Clone repo, https://github.com/AdvantageIntegratedSolutions/BaseJSGulp.git
 - Fill out app.json.
+```js
+{
+  "name": "BaseJSGulp",
+  "realm": "ais",
+  "dbid": "bkb4gyte3",
+  "username": "kith",
+  "password": "jasMine5281",
+  "token": "8t82d3b3sxnfxd45iu2pbepcjfd",
+  "origin": "https://github.com/KitHensel/BaseJSGulp.git",
+  "jsBundlePrefix": "main",
+  "cssBundlePrefix": "styles"
+}
+```
 - run "npm install"
+- run "gulp init"
 - Run either "gulp deploy" or "gulp watch" to begin automating tasks!!
 
 ## How to use?
