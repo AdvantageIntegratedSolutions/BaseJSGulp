@@ -16,6 +16,7 @@ BaseJSGulp utilizes gulp and its plugins to automate and enhance the development
 
 ## Setup new Project
 - Clone repo, https://github.com/AdvantageIntegratedSolutions/BaseJSGulp.git
+- Create new repo. Rename app to name of repo.
 - Fill out app.json.
 ```js
 {
@@ -24,9 +25,10 @@ BaseJSGulp utilizes gulp and its plugins to automate and enhance the development
   "dbid": "bkb4gyte3", //quickbase main db
   "username": "uSeRnAmE", //quickbase username
   "password": "pAsSwOrD", //quickbase password
-  "token": "8t82d3b3sxnfxd45iu2pbepcjfd", //quickbase app token
+  "token": "8t82d3b3sxnfxd45iu2pbepcjfd", //quickbase app token,
+  "origin": "https://github.com/AdvantageIntegratedSolutions/BaseJSGulp.git", //url of new repo
   "jsBundlePrefix": "main", //compiled file prefix for JS 
-  "cssBundlePrefix": "styles" //compiled file prefix for JS
+  "cssBundlePrefix": "styles" //compiled file prefix for CSS
 }
 ```
 - run "npm install"
