@@ -19,15 +19,14 @@ BaseJSGulp utilizes gulp and its plugins to automate and enhance the development
 - Fill out app.json.
 ```js
 {
-  "name": "BaseJSGulp",
-  "realm": "ais",
-  "dbid": "bkb4gyte3",
-  "username": "kith",
-  "password": "jasMine5281",
-  "token": "8t82d3b3sxnfxd45iu2pbepcjfd",
-  "origin": "https://github.com/KitHensel/BaseJSGulp.git",
-  "jsBundlePrefix": "main",
-  "cssBundlePrefix": "styles"
+  "name": "BaseJSGulp", #name of new app
+  "realm": "ais", #quickbase realm
+  "dbid": "bkb4gyte3", #quickbase main db
+  "username": "kith", #quickbase username
+  "password": "jasMine5281", #quickbase password
+  "token": "8t82d3b3sxnfxd45iu2pbepcjfd", #quickbase app token
+  "jsBundlePrefix": "main", #compiled file prefix for JS 
+  "cssBundlePrefix": "styles" ##compiled file prefix for JS
 }
 ```
 - run "npm install"
