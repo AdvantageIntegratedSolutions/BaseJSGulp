@@ -14,7 +14,7 @@ BaseJSGulp utilizes gulp and its plugins to automate and enhance the development
 - Compile JSX and convert ES6 to ES5.
 - Automatically commit and push to git repo.
 
-## Dependency - One-time installation
+## Dependency(One time installation)
 - [BaseJSGulpModule](https://github.com/AdvantageIntegratedSolutions/BaseJSGulpModule)
 
 ## Setup new Project
