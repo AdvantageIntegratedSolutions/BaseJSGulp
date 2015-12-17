@@ -12,9 +12,9 @@ BaseJSGulp utilizes gulp and its plugins to automate and enhance the development
 - Consolidate, namespace and upload files to QuickBase app including the git repo url at the top of each page.
 - Compile SCSS to CSS and minify CSS.
 - Compile JSX and convert ES6 to ES5.
-- Automatically push to git repo.
+- Automatically commit and push to git repo.
 
-## Dependency
+## Dependency - One-time installation
 - [BaseJSGulpModule](https://github.com/AdvantageIntegratedSolutions/BaseJSGulpModule)
 
 ## Setup new Project
@@ -29,18 +29,18 @@ BaseJSGulp utilizes gulp and its plugins to automate and enhance the development
   "dbid": "bkb4gyte3", //quickbase main db
   "username": "uSeRnAmE", //quickbase username
   "password": "pAsSwOrD", //quickbase password
-  "token": "8t82d3b3sxnfxd45iu2pbepcjfd", //quickbase app token
+  "token": "8t82d3b3sxnfxiu2pbepcjfd", //quickbase app token
   "origin": "https://github.com/AdvantageIntegratedSolutions/BaseJSGulp.git", //url of new repo
   "jsBundlePrefix": "main", //compiled file prefix for JS 
   "cssBundlePrefix": "styles" //compiled file prefix for CSS
 }
 ```
 - run "gulp init"
-- Run either "gulp deploy" or "gulp watch" to begin automating tasks!!
 
 ## How to use?
-To use, run the following commands within your app:
+To start automating tasks, run the following commands within your app:
 
 - "gulp deploy" - if you want to run your tasks periodically, run "gulp deploy" and it will execute all deployment tasks.
 
 - "gulp watch" - if you want to run your tasks each time you make a change to your app, run "gulp watch" in your terminal and it will execute all deployment tasks as you work in your app.
+
