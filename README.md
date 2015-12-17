@@ -14,12 +14,13 @@ BaseJSGulp utilizes gulp and its plugins to automate and enhance the development
 - Compile JSX and convert ES6 to ES5.
 - Automatically push to git repo.
 
+## Dependency
+- [BaseJSGulpModule](https://github.com/AdvantageIntegratedSolutions/BaseJSGulpModule)
+
 ## Setup new Project
 - Clone repo, https://github.com/AdvantageIntegratedSolutions/BaseJSGulp.git
 - Create new repo. Rename app to name of repo.
 - Fill out app.json.
-- npm install -g
-- sudo vi ~/.bash_profile; export NODE_PATH=/usr/local/lib/node_modules
 ```js
 {
   "name": "BaseJSGulp", //name of new app
@@ -34,7 +35,6 @@ BaseJSGulp utilizes gulp and its plugins to automate and enhance the development
   "cssBundlePrefix": "styles" //compiled file prefix for CSS
 }
 ```
-- run "npm install"
 - run "gulp init"
 - Run either "gulp deploy" or "gulp watch" to begin automating tasks!!
 
