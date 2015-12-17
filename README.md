@@ -18,6 +18,8 @@ BaseJSGulp utilizes gulp and its plugins to automate and enhance the development
 - Clone repo, https://github.com/AdvantageIntegratedSolutions/BaseJSGulp.git
 - Create new repo. Rename app to name of repo.
 - Fill out app.json.
+- npm install -g
+- sudo vi ~/.bash_profile; export NODE_PATH=/usr/local/lib/node_modules
 ```js
 {
   "name": "BaseJSGulp", //name of new app

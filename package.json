@@ -1,7 +1,7 @@
 {
   "name": "BaseJSGulp",
   "version": "0.0.1",
-  "description": "QuickBase App Builder",
+  "description": "QuickBase automatic build system",
   "engines": {
     "node": "0.12.2",
     "npm": "2.7.4"
