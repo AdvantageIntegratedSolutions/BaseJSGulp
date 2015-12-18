@@ -10,7 +10,7 @@
   when you run `gulp`.
 */
 var app = require('../app')
-console.log(app)
+console.log(app.path)
 var requireDir = require('/usr/local/lib/node_modules/BaseJSGulpModule/node_modules/require-dir')
 
 // Require all tasks in gulpfile.js/tasks, including subfolders
