@@ -27,8 +27,9 @@ gulp.task('init', function(){
 });
 
 gulp.task('update-readme', function(){
-  return gulp.src('./README.md')
-    .pipe(gulp.dest('.'));
+  gulp.src(['file.txt'])
+    .pipe(replace(/foo(.{3})/g, '$1foo'))
+    .pipe(gulp.dest('build/file.txt'));
 });
 
 //TODO
