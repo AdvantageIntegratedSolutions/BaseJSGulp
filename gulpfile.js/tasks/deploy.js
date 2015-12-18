@@ -27,8 +27,8 @@ gulp.task('init', function(){
 
 //rename app
 gulp.task('rename-app', function() {
-  return gulp.src("./*")
-    .pipe(rename("main/text/ciao/goodbye.md"))
+  return gulp.src(".")
+    .pipe(rename("Hello"))
     //.pipe(gulp.dest("../"+app.name+"/."));
 });
 
