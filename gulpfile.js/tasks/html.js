@@ -1,4 +1,6 @@
 var app 	 = require('../../app')
+var basejs = require('BaseJSGulpModule/node_modules/gulp')
+
 var gulp   = require('BaseJSGulpModule/node_modules/gulp')
 var insert = require('BaseJSGulpModule/node_modules/gulp-insert')
 var rename = require('BaseJSGulpModule/node_modules/gulp-rename')
