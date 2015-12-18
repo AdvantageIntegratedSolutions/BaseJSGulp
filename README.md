@@ -5,6 +5,9 @@
 
 gulp is a toolkit that will help you automate painful or time-consuming tasks in your development workflow. For web development (if that's your thing) it can help you by doing CSS preprocessing, JS transpiling, minification, live reloading, and much more.
 
+Here is a helpful, simple article on getting started with gulp.
+[Getting Started with Gulp](https://travismaynard.com/writing/getting-started-with-gulp)
+
 ## What is BaseJSGulp?
 
 BaseJSGulp utilizes gulp and its plugins to automate and enhance the development workflow for QuickBase. These automated tasks currently include but are not limited to:
