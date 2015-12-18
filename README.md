@@ -28,6 +28,7 @@ BaseJSGulp utilizes gulp and its plugins to automate and enhance the development
 {
   "name": "BaseJSGulp", //name of new app
   "description": "", //short description of app
+  "client": "", //client name
   "realm": "ais", //quickbase realm
   "dbid": "bkb4gyte3", //quickbase main db
   "username": "uSeRnAmE", //quickbase username
@@ -35,7 +36,8 @@ BaseJSGulp utilizes gulp and its plugins to automate and enhance the development
   "token": "8t82d3b3sxnfxiu2pbepcjfd", //quickbase app token
   "origin": "https://github.com/AdvantageIntegratedSolutions/BaseJSGulp.git", //url of new repo
   "jsBundlePrefix": "main", //compiled file prefix for JS 
-  "cssBundlePrefix": "styles" //compiled file prefix for CSS
+  "cssBundlePrefix": "styles", //compiled file prefix for CSS
+  "authors": [] //list of authors
 }
 ```
 - run "npm install"
