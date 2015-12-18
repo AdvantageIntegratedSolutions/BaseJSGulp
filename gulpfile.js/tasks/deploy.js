@@ -30,7 +30,7 @@ gulp.task('init', function(){
 gulp.task('update-readme', function(){
   gulp.src(['README.md'])
     .pipe(replace(/.*\n?/g, ''))
-    .pipe(insert.prepend(app.name))
+    .pipe(insert.prepend(app.name + " - " + app.description))
     .pipe(gulp.dest('.'));
 });
 
