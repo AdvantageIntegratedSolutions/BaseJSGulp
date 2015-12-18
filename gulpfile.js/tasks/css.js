@@ -1,8 +1,8 @@
 var app 	     = require('../../app')
-var gulp       = require('BaseJSGulpModule/gulp')
-var sass       = require('BaseJSGulpModule/gulp-sass')
-var concat     = require('BaseJSGulpModule/gulp-concat')
-var insert     = require('BaseJSGulpModule/gulp-insert')
+var gulp       = require('BaseJSGulpModule/node_modules/gulp')
+var sass       = require('BaseJSGulpModule/node_modules/gulp-sass')
+var concat     = require('BaseJSGulpModule/node_modules/gulp-concat')
+var insert     = require('BaseJSGulpModule/node_modules/gulp-insert')
 
 //compile scss
 gulp.task('css', function() {
