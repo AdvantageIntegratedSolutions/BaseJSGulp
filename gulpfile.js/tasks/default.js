@@ -1,3 +1,3 @@
-var gulp 			 = require(process.env.BASE_JS_NODE_PATH + 'gulp')
+var gulp 			 = require('gulp')
 
 gulp.task('default', ['deploy'])
