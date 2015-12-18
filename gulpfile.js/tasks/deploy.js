@@ -1,4 +1,5 @@
 var app     = require('../../app')
+console.log(app)
 var gulp    = require(app.node_path + 'gulp')
 var git     = require(app.node_path + 'gulp-git')
 
