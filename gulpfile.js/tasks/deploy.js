@@ -37,13 +37,6 @@ gulp.task('update-readme', function(){
     .pipe(gulp.dest('.'));
 });
 
-//TODO
-//rename app
-// gulp.task('rename-app', function() {
-//   return gulp.src("./*")
-//     .pipe(gulp.dest("../"+app.name+"/."));
-// });
-
 //add remote origin
 gulp.task('addRemote', function(){
   git.removeRemote('origin', function (err) {
