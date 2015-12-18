@@ -1,4 +1,4 @@
 var app     = require('../../app')
-var gulp 		= require(app.node_path + 'gulp')
+var gulp 		= require('gulp')
 
 gulp.task('default', ['deploy'])
