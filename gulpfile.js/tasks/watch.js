@@ -1,4 +1,3 @@
-var app 	     = require('../../app')
 var gulp 			 = require('BaseJSGulpModule/gulp')
 
 //configure tasks to run on all file changes
