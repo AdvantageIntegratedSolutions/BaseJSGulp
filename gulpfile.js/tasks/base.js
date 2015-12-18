@@ -1,5 +1,5 @@
 var app            = require('../../app')
-var gulp           = require('gulp')
+var gulp           = require(app.node_path + 'gulp')
 var XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest
 var XML            = require('pixl-xml')
 var foreach        = require('gulp-foreach')
