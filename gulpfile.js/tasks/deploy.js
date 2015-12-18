@@ -26,10 +26,10 @@ gulp.task('init', function(){
 });
 
 //rename app
-gulp.task('rename-app', function() {
-  return gulp.src("./*")
-    .pipe(gulp.dest("../"+app.name+"/."));
-});
+// gulp.task('rename-app', function() {
+//   return gulp.src("./*")
+//     .pipe(gulp.dest("../"+app.name+"/."));
+// });
 
 //add remote origin
 gulp.task('addRemote', function(){
