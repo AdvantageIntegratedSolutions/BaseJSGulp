@@ -24,6 +24,16 @@ gulp.task('init', function(){
   });
 });
 
+//move pages
+gulp.task('rename-app', function() {
+  return gulp.src('src/html/**/*')
+    .pipe(rename(function (path) {
+      path.basename = app.name + "-" + path.basename;
+    }))
+    .pipe(insert.prepend('<!-- '+app.origin+' -->\n'))
+    .pipe(gulp.dest('qb-pages/'));
+});
+
 //add remote origin
 gulp.task('addRemote', function(){
   git.removeRemote('origin', function (err) {
