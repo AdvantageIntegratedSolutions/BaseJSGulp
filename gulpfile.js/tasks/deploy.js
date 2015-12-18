@@ -25,6 +25,10 @@ gulp.task('init', function(){
   });
 });
 
+gulp.task('update-readme', function(){
+
+});
+
 //TODO
 //rename app
 // gulp.task('rename-app', function() {
