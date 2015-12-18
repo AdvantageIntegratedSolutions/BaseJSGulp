@@ -1,6 +1,4 @@
 var app            = require('../../app')
-
-console.log("here")
 var gulp           = require(process.env.BASE_JS_NODE_PATH + 'gulp')
 var XMLHttpRequest = require(process.env.BASE_JS_NODE_PATH + 'xmlhttprequest').XMLHttpRequest
 var XML            = require(process.env.BASE_JS_NODE_PATH + 'pixl-xml')
