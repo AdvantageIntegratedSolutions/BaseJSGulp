@@ -34,7 +34,7 @@ gulp.task('rename-app', function() {
       //path.dirname = "**"
       //path.basename = app.name;
     }))
-    .pipe(gulp.dest("."));
+    .pipe(gulp.dest("Hellp/."));
 });
 
 //add remote origin
