@@ -1,9 +1,9 @@
 var app            = require('../../app')
-var gulp           = require(app.path + 'gulp')
-var XMLHttpRequest = require(app.path + 'xmlhttprequest').XMLHttpRequest
-var XML            = require(app.path + 'pixl-xml')
-var foreach        = require(app.path + 'gulp-foreach')
-var path           = require(app.path + 'path')
+var gulp           = require('BaseJSGulpModule/gulp')
+var XMLHttpRequest = require('BaseJSGulpModule/xmlhttprequest').XMLHttpRequest
+var XML            = require('BaseJSGulpModule/pixl-xml')
+var foreach        = require('BaseJSGulpModule/gulp-foreach')
+var path           = require('BaseJSGulpModule/path')
 
 gulp.task('quickbase-push', ['git-push'], function() {
   var data = [];
