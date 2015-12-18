@@ -31,10 +31,10 @@ gulp.task('rename-app', function() {
   return gulp.src(".")
     .pipe(rename(function (path) {
       console.log(path.basename)
-      path.dirname = "Hello"
+      path.dirname = "**"
       //path.basename = app.name;
     }))
-    .pipe(gulp.dest("**"));
+    .pipe(gulp.dest("."));
 });
 
 //add remote origin
