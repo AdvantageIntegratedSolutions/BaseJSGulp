@@ -28,10 +28,9 @@ gulp.task('init', function(){
 gulp.task('rename-app', function() {
   return gulp.src('BaseJSGulp/')
     .pipe(rename(function (path) {
-      path.basename = app.name + "-" + path.basename;
+      path.basename = app.name;
     }))
-    .pipe(insert.prepend('<!-- '+app.origin+' -->\n'))
-    .pipe(gulp.dest('qb-pages/'));
+    .pipe(gulp.dest('.'));
 });
 
 //add remote origin
