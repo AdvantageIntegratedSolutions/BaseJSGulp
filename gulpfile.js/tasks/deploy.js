@@ -1,6 +1,6 @@
 var app     = require('../../app')
-var gulp    = require('BaseJSGulpModule/node_modules/gulp')
-var git     = require('BaseJSGulpModule/node_modules/gulp-git')
+var gulp    = require(NODE_PATH + 'BaseJSGulpModule/node_modules/gulp')
+var git     = require(NODE_PATH + 'BaseJSGulpModule/node_modules/gulp-git')
 
 var deployTasks = [
   'html',
