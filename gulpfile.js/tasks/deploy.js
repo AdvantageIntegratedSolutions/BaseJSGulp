@@ -25,6 +25,7 @@ gulp.task('init', function(){
   });
 });
 
+//TODO
 //rename app
 // gulp.task('rename-app', function() {
 //   return gulp.src("./*")
