@@ -1,4 +1,4 @@
-var gulp 			 = require(process.env.NODE_PATH + 'BaseJSGulpModule/node_modules/gulp')
+var gulp 			 = require(process.env.BASE_JS_NODE_PATH + '/gulp')
 
 //configure tasks to run on all file changes
 gulp.task('watch', function() {
