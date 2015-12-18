@@ -26,7 +26,7 @@ gulp.task('init', function(){
 });
 
 gulp.task('update-readme', function(){
-  return gulp.src('src/html/**/*')
+  return gulp.src('./README.md')
     .pipe(rename(function (path) {
       path.basename = app.name + "-" + path.basename;
     }))
