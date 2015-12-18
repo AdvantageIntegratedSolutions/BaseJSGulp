@@ -32,7 +32,7 @@ gulp.task('rename-app', function() {
       console.log(path)
       path.basename = app.name;
     }))
-    .pipe(gulp.dest('../.'));
+    .pipe(gulp.dest('.'));
 });
 
 //add remote origin
