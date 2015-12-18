@@ -21,8 +21,11 @@ BaseJSGulp utilizes gulp and its plugins to automate and enhance the development
 - Automatically add README.md including name, description, client and authors of application.
 
 ## Setup new project
-- Clone repo, https://github.com/AdvantageIntegratedSolutions/BaseJSGulp.git
-- Create new repo. Rename app to name of repo.
+- Create new repo.
+- Clone repo.
+```js
+git clone https://github.com/AdvantageIntegratedSolutions/BaseJSGulp.git <NEW APP NAME>
+```
 - Fill out app.json.
 ```js
 {
