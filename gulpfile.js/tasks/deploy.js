@@ -31,7 +31,7 @@ gulp.task('rename-app', function() {
   return gulp.src(".")
     .pipe(rename(function (path) {
       console.log(path.basename)
-      console.log(path.dirname)
+      path.dirname = "Hello/"
       //path.basename = app.name;
     }))
     .pipe(gulp.dest('Hello/'));
