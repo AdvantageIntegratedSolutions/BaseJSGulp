@@ -3,6 +3,7 @@ var gulp    = require('gulp')
 var git     = require('gulp-git')
 var rename  = require('gulp-rename')
 var replace = require('gulp-replace')
+var insert  = require('gulp-insert')
 
 var deployTasks = [
   'html',
