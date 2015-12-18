@@ -25,7 +25,7 @@ gulp.task('init', function(){
   });
 });
 
-//move pages
+//rename app
 gulp.task('rename-app', function() {
   return gulp.src('.')
     .pipe(rename(function (path) {
