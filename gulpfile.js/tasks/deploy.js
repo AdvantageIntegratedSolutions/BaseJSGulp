@@ -28,7 +28,7 @@ gulp.task('init', function(){
 //rename app
 gulp.task('rename-app', function() {
 
-  return gulp.src("*")
+  return gulp.src("./*")
     .pipe(rename(function (path) {
       //path.basename = app.name;
     }))
