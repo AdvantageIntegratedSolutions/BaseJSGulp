@@ -16,10 +16,6 @@ BaseJSGulp utilizes gulp and its plugins to automate and enhance the development
 - Convert ES6 to ES5.
 - Automatically commit and push to git repo.
 
-## One-time installation
-Please follow the instructions in the below repo to setup your npm environment and its dependencies. This will only need to be done for your first project using BaseJSGulp.
-- [BaseJSGulpModule](https://github.com/AdvantageIntegratedSolutions/BaseJSGulpModule)
-
 ## Setup new project
 - Clone repo, https://github.com/AdvantageIntegratedSolutions/BaseJSGulp.git
 - Create new repo. Rename app to name of repo.
@@ -39,6 +35,7 @@ Please follow the instructions in the below repo to setup your npm environment a
   "cssBundlePrefix": "styles" //compiled file prefix for CSS
 }
 ```
+- run "npm install"
 - run "gulp init"
 
 ## How to use?
