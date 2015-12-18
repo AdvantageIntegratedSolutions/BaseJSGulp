@@ -8,17 +8,19 @@ gulp is a toolkit that will help you automate painful or time-consuming tasks in
 ## What is BaseJSGulp?
 
 BaseJSGulp utilizes gulp and its plugins to automate and enhance the development workflow for QuickBase. These automated tasks currently include but are not limited to:
-- Automatically execute tasks on change("gulp watch") or by deployment command("gulp deploy").
-- Consolidate, namespace and upload files to QuickBase app including the git repo url at the top of each page.
-- Compile SCSS to CSS and minify CSS.
-- Compile JSX and convert ES6 to ES5.
+- Automatically execute common tasks on change("gulp watch") or by deployment command("gulp deploy").
+- Minify JS and CSS. 
+- Namespace and upload files to QuickBase app including the git repo url at the top of each page.
+- Compile SCSS to CSS.
+- Compile JSX to JS.
+- Convert ES6 to ES5.
 - Automatically commit and push to git repo.
 
 ## One-time installation
 Please follow the instructions in the below repo to setup your npm environment and its dependencies. This will only need to be done for your first project using BaseJSGulp.
 - [BaseJSGulpModule](https://github.com/AdvantageIntegratedSolutions/BaseJSGulpModule)
 
-## Setup new Project
+## Setup new project
 - Clone repo, https://github.com/AdvantageIntegratedSolutions/BaseJSGulp.git
 - Create new repo. Rename app to name of repo.
 - Fill out app.json.
