@@ -30,7 +30,6 @@ BaseJSGulp utilizes gulp and its plugins to automate and enhance the development
   "password": "pAsSwOrD", //quickbase password
   "token": "8t82d3b3sxnfxiu2pbepcjfd", //quickbase app token
   "origin": "https://github.com/AdvantageIntegratedSolutions/BaseJSGulp.git", //url of new repo
-  "path": "/usr/local/lib/node_modules/BaseJSGulpModule/node_modules/", //path to BaseJSGulpModule installation
   "jsBundlePrefix": "main", //compiled file prefix for JS 
   "cssBundlePrefix": "styles" //compiled file prefix for CSS
 }
