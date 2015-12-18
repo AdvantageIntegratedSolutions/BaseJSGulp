@@ -1,12 +1,12 @@
 var app 	     = require('../../app')
-var gulp 			 = require(app.node_path + 'gulp')
-var concat 		 = require(app.node_path + 'gulp-concat')
-var uglify  	 = require(app.node_path + 'gulp-uglify')
-var babel 		 = require(app.node_path + 'gulp-babel')
-var react 		 = require(app.node_path + 'gulp-react')
-var sourcemaps = require(app.node_path + 'gulp-sourcemaps')
-var rename 		 = require(app.node_path + 'gulp-rename')
-var insert 		 = require(app.node_path + 'gulp-insert')
+var gulp 			 = require('gulp')
+var concat 		 = require('gulp-concat')
+var uglify  	 = require('gulp-uglify')
+var babel 		 = require('gulp-babel')
+var react 		 = require('gulp-react')
+var sourcemaps = require('gulp-sourcemaps')
+var rename 		 = require('gulp-rename')
+var insert 		 = require('gulp-insert')
 
 //compile JS
 gulp.task('js', function() {
