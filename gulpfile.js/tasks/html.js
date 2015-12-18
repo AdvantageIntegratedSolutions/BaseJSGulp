@@ -1,7 +1,7 @@
 var app 	 = require('../../app')
-var gulp   = require('/usr/local/lib/node_modules/BaseJSGulpModule/node_modules/gulp')
-var insert = require('/usr/local/lib/node_modules/BaseJSGulpModule/node_modules/gulp-insert')
-var rename = require('/usr/local/lib/node_modules/BaseJSGulpModule/node_modules/gulp-rename')
+var gulp   = require(app.path + 'gulp')
+var insert = require(app.path + 'gulp-insert')
+var rename = require(app.path + 'gulp-rename')
 
 //move pages
 gulp.task('html', function() {
