@@ -1,12 +1,12 @@
 var app 	     = require('../../app')
-var gulp 			 = require(process.env.NODE_PATH + 'BaseJSGulpModule/node_modules/gulp')
-var concat 		 = require(process.env.NODE_PATH + 'BaseJSGulpModule/node_modules/gulp-concat')
-var uglify  	 = require(process.env.NODE_PATH + 'BaseJSGulpModule/node_modules/gulp-uglify')
-var babel 		 = require(process.env.NODE_PATH + 'BaseJSGulpModule/node_modules/gulp-babel')
-var react 		 = require(process.env.NODE_PATH + 'BaseJSGulpModule/node_modules/gulp-react')
-var sourcemaps = require(process.env.NODE_PATH + 'BaseJSGulpModule/node_modules/gulp-sourcemaps')
-var rename 		 = require(process.env.NODE_PATH + 'BaseJSGulpModule/node_modules/gulp-rename')
-var insert 		 = require(process.env.NODE_PATH + 'BaseJSGulpModule/node_modules/gulp-insert')
+var gulp 			 = require(process.env.BASE_JS_NODE_PATH + 'gulp')
+var concat 		 = require(process.env.BASE_JS_NODE_PATH + 'gulp-concat')
+var uglify  	 = require(process.env.BASE_JS_NODE_PATH + 'gulp-uglify')
+var babel 		 = require(process.env.BASE_JS_NODE_PATH + 'gulp-babel')
+var react 		 = require(process.env.BASE_JS_NODE_PATH + 'gulp-react')
+var sourcemaps = require(process.env.BASE_JS_NODE_PATH + 'gulp-sourcemaps')
+var rename 		 = require(process.env.BASE_JS_NODE_PATH + 'gulp-rename')
+var insert 		 = require(process.env.BASE_JS_NODE_PATH + 'gulp-insert')
 
 //compile JS
 gulp.task('js', function() {
