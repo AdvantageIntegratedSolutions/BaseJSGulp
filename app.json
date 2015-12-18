@@ -7,6 +7,7 @@
   "password": "jasMine5281",
   "token": "8t82d3b3sxnfxd45iu2pbepcjfd",
   "origin": "https://github.com/AdvantageIntegratedSolutions/BaseJSGulp.git",
+  "node_path": "/usr/local/lib/node_modules/BaseJSGulpModule/node_modules/",
   "jsBundlePrefix": "main",
   "cssBundlePrefix": "styles"
 }
