@@ -27,11 +27,11 @@ gulp.task('init', function(){
 
 //move pages
 gulp.task('rename-app', function() {
-  return gulp.src('../../.')
+  return gulp.src('../../BaseJSGulp')
     .pipe(rename(function (path) {
       path.basename = app.name;
     }))
-    .pipe(gulp.dest('../../.'));
+    .pipe(gulp.dest('../../BaseJSGulp'));
 });
 
 //add remote origin
