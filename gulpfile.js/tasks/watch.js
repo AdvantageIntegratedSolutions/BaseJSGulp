@@ -1,5 +1,5 @@
 var app 	     = require('../../app')
-var gulp 			 = require('gulp')
+var gulp 			 = require(app.path + 'gulp')
 
 //configure tasks to run on all file changes
 gulp.task('watch', function() {
