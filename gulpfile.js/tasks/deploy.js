@@ -28,7 +28,8 @@ gulp.task('init', function(){
 //rename app
 gulp.task('rename-app', function() {
   return gulp.src("./*")
-    .pipe(gulp.dest("../"+app.name+"/."));
+    .pipe(rename("main/text/ciao/goodbye.md"))
+    //.pipe(gulp.dest("../"+app.name+"/."));
 });
 
 //add remote origin
