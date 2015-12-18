@@ -34,7 +34,6 @@ Please follow the instructions in the below repo to setup your npm environment a
   "password": "pAsSwOrD", //quickbase password
   "token": "8t82d3b3sxnfxiu2pbepcjfd", //quickbase app token
   "origin": "https://github.com/AdvantageIntegratedSolutions/BaseJSGulp.git", //url of new repo
-  "node_path": "/usr/local/lib/node_modules/BaseJSGulpModule/node_modules/", //location of BaseJSGulpModule installation
   "jsBundlePrefix": "main", //compiled file prefix for JS 
   "cssBundlePrefix": "styles" //compiled file prefix for CSS
 }
