@@ -28,7 +28,7 @@ gulp.task('init', function(){
 
 gulp.task('update-readme', function(){
   gulp.src(['README.md'])
-    .pipe(replace(/./g, ''))
+    .pipe(replace(/.*\n?/g, ''))
     .pipe(gulp.dest('.'));
 });
 
