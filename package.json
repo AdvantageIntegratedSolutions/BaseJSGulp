@@ -21,6 +21,7 @@
     "gulp-react": "*",
     "gulp-sourcemaps": "*",
     "gulp-rename": "*",
+    "gulp-replace": "*",
     "gulp-insert": "*",
     "gulp-git": "*",
     "gulp-foreach": "*",
