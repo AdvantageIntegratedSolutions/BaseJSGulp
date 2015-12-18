@@ -1,5 +1,5 @@
 var app 	 = require('../../app')
-var basejs = require('BaseJSGulpModule/node_modules/gulp')
+var basejs = require('BaseJSGulpModule')
 
 var gulp   = require('BaseJSGulpModule/node_modules/gulp')
 var insert = require('BaseJSGulpModule/node_modules/gulp-insert')
