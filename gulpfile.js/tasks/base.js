@@ -5,9 +5,6 @@ var XML            = require('pixl-xml')
 var foreach        = require('gulp-foreach')
 var path           = require('path')
 
-console.log("base")
-console.log(gulp)
-
 gulp.task('quickbase-push', ['git-push'], function() {
   var data = [];
   data.push("<qdbapi>");
