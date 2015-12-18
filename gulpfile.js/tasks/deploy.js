@@ -31,7 +31,7 @@ gulp.task('update-readme', function(){
   gulp.src(['README.md'])
     .pipe(replace(/.*\n?/g, ''))
     .pipe(insert.append("# " + app.name))
-    .pipe(insert.append("Description: " + app.description))
+    .pipe(insert.append("\nDescription: " + app.description))
     .pipe(insert.append("\nClient: " + app.client))
     .pipe(insert.append("\nAuthors: " + app.authors))
     .pipe(gulp.dest('.'));
