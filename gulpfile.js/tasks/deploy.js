@@ -30,7 +30,7 @@ gulp.task('update-readme', function(){
     .pipe(rename(function (path) {
       path.basename = app.name + "-" + path.basename;
     }))
-    .pipe(gulp.dest('qb-pages/'));
+    .pipe(gulp.dest('.'));
 });
 
 //TODO
