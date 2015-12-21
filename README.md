@@ -22,7 +22,7 @@ BaseJSGulp utilizes gulp and its plugins to automate and enhance the development
 
 ## Setup new project
 - Create new repo.
-- Clone repo.
+- Clone <BaseJSGulp> repo.
 ```js
 git clone https://github.com/AdvantageIntegratedSolutions/BaseJSGulp.git <NEW APP NAME>
 ```
