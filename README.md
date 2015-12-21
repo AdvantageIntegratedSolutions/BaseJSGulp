@@ -37,7 +37,7 @@ git clone https://github.com/AdvantageIntegratedSolutions/BaseJSGulp.git <NEW AP
   "username": "uSeRnAmE", //quickbase username
   "password": "pAsSwOrD", //quickbase password
   "token": "8t82d3b3sxnfxiu2pbepcjfd", //quickbase app token
-  "origin": "https://github.com/AdvantageIntegratedSolutions/BaseJSGulp.git", //url of new repo
+  "origin": "https://github.com/AdvantageIntegratedSolutions/<NEW APP NAME>.git", //url of new repo
   "jsBundlePrefix": "main", //compiled file prefix for JS 
   "cssBundlePrefix": "styles", //compiled file prefix for CSS
   "authors": ["dev@advantagequickbase.com"] //list of authors
