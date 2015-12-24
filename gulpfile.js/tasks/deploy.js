@@ -11,8 +11,7 @@ var deployTasks = [
   'js',
   'git-add',
   'git-commit',
-  'git-push',
-  'quickbase-push'
+  'git-push'
 ];
 
 gulp.task('deploy', function() {
