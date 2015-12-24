@@ -20,9 +20,6 @@ gulp.task('quickbase-push', ['git-push'], function() {
 
 //push to QuickBase App
 gulp.task('quickbase-upload', function() {
-  var pageBody = "hello";
-  var filename = "filename";
-
   return gulp.src('qb-pages/*')
     .pipe(foreach(function(stream, file){
       filename = handleXMLChars(path.basename(file.path));
