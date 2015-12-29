@@ -26,9 +26,9 @@ BaseJSGulp utilizes gulp and its plugins to automate and enhance the development
 ```shell
 git clone https://github.com/AdvantageIntegratedSolutions/BaseJSGulp.git <NEW APP NAME>
 ```
-- Replace the git remote with your new repo's git url.
+- Replace the git origin remote with your new repo's git url.
 ```shell
-git remote set-url <new repo git url>
+git remote set-url origin <new repo git url>
 ```
 - Fill out app.json.
 ```js
