@@ -1,14 +1,14 @@
 {
-  "name": "Zest Adaptics",
-  "description": "Angular app for Juice Pharma",
-  "client": "Juice Pharma",
-  "realm": "juicepharma",
-  "dbid": "bj5u8synw",
-  "username": "cullenjett",
-  "password": "password",
+  "name": "",
+  "description": "",
+  "client": "",
+  "realm": "ais",
+  "dbid": "",
+  "username": "",
+  "password": "",
   "token": "",
-  "origin": "https://github.com/AdvantageIntegratedSolutions/JuicePharma",
-  "jsBundlePrefix": "app",
+  "origin": "",
+  "jsBundlePrefix": "main",
   "cssBundlePrefix": "styles",
-  "authors": ["cjett@advantagequickbase.com"]
+  "authors": []
 }
