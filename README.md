@@ -23,10 +23,13 @@ BaseJSGulp utilizes gulp and its plugins to automate and enhance the development
 ## Setup new project
 - Create new repo.
 - Clone 'BaseJSGulp' repo.
-```js
+```shell
 git clone https://github.com/AdvantageIntegratedSolutions/BaseJSGulp.git <NEW APP NAME>
 ```
-- Setup your new git remote (git remote add origin <new repo git url>)
+- Replace the git remote with your new repo's git url.
+```shell
+git remote set-url <new repo git url>
+```
 - Fill out app.json.
 ```js
 {
