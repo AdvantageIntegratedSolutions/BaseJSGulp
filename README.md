@@ -12,7 +12,7 @@ Here is a helpful, simple article on getting started with gulp.
 
 BaseJSGulp utilizes gulp and its plugins to automate and enhance the development workflow for QuickBase. These automated tasks currently include but are not limited to:
 - Automatically execute common tasks on change("gulp watch") or by deployment command("gulp deploy").
-- Minify JS and CSS. 
+- Minify JS and CSS.
 - Namespace and upload files to QuickBase app including the git repo url at the top of each page.
 - Compile SCSS to CSS.
 - Compile JSX to JS.
@@ -26,6 +26,7 @@ BaseJSGulp utilizes gulp and its plugins to automate and enhance the development
 ```js
 git clone https://github.com/AdvantageIntegratedSolutions/BaseJSGulp.git <NEW APP NAME>
 ```
+- Setup your new git remote (git remote add origin <new repo git url>)
 - Fill out app.json.
 ```js
 {
@@ -38,7 +39,7 @@ git clone https://github.com/AdvantageIntegratedSolutions/BaseJSGulp.git <NEW AP
   "password": "pAsSwOrD", //quickbase password
   "token": "8t82d3b3sxnfxiu2pbepcjfd", //quickbase app token
   "origin": "https://github.com/AdvantageIntegratedSolutions/<NEW APP NAME>.git", //url of new repo
-  "jsBundlePrefix": "main", //compiled file prefix for JS 
+  "jsBundlePrefix": "main", //compiled file prefix for JS
   "cssBundlePrefix": "styles", //compiled file prefix for CSS
   "authors": ["dev@advantagequickbase.com"] //list of authors
 }
