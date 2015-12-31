@@ -5,7 +5,7 @@ var XML            = require('pixl-xml')
 var foreach        = require('gulp-foreach')
 var path           = require('path')
 
-gulp.task('quickbase-push', function() {
+gulp.task('quickbase-push', ['html', 'js', 'css'], function() {
   var data = [];
   data.push("<qdbapi>");
   data.push.apply(data, ["<apptoken>", app.token, "</apptoken>"]);
