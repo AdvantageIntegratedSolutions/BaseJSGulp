@@ -11,6 +11,7 @@ var deployTasks = [
   'js',
   'git-add',
   'git-commit',
+  'quickbase-push',
   'git-push'
 ];
 
