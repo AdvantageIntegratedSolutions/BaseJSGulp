@@ -14,9 +14,7 @@ gulp.task('js', function() {
     .pipe(sourcemaps.init())
     .pipe(react())
     .pipe(babel())
-    .pipe(uglify())
     .pipe(concat(app.name + '-'+app.jsBundlePrefix+'.js'))
     .pipe(insert.prepend('//'+app.origin+'\n'))
-    .pipe(sourcemaps.write())
     .pipe(gulp.dest('qb-pages/'));
 });
