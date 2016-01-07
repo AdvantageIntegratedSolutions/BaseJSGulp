@@ -4,6 +4,7 @@ var XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest
 var XML            = require('pixl-xml')
 var foreach        = require('gulp-foreach')
 var path           = require('path')
+var notify         = require("gulp-notify")
 
 gulp.task('quickbase-push', ['html', 'js', 'css'], function() {
   var data = [];
@@ -38,6 +39,8 @@ gulp.task('quickbase-upload', function() {
 
       return stream;
     }))
+
+    .pipe(notify({ message: "Synced.", title: "Gulp"} ));
 });
 
 function handleXMLChars(string){
