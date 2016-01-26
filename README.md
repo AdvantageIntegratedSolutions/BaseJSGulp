@@ -46,6 +46,13 @@ git remote set-url origin <new repo git url>
   "cssBundlePrefix": "styles", //compiled file prefix for CSS
   "authors": ["dev@advantagequickbase.com"] //list of authors
 }
+
+Please note, set the "GULPPASSWORD" ENV variable to avoid committing password. Simply keep the password value empty in app.json or remove it.
+
+```shell
+sudo vi ~/.bash_profile; export GULPPASSWORD=><PASSWORD>;
+```
+
 ```
 - run "npm install"
 - run "gulp init"
@@ -56,4 +63,8 @@ To start automating tasks, run the following commands within your app:
 - "gulp deploy" - if you want to run your tasks periodically, run "gulp deploy" and it will execute all deployment tasks.
 
 - "gulp watch" - if you want to run your tasks each time you make a change to your app, run "gulp watch" in your terminal and it will execute all deployment tasks as you work in your app.
+
+## Enable Notifications
+
+Allow mac alerts when tasks are finished(i.e. everything is synced) by enabling notifications. System Preferences > Notifications > terminal-notifier
 

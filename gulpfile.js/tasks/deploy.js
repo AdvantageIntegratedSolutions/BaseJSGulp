@@ -30,9 +30,9 @@ gulp.task('init', function(){
 gulp.task('update-readme', function(){
   gulp.src(['README.md'])
     .pipe(replace(/.*\n?/g, ''))
-    .pipe(insert.append("# " + app.name))
-    .pipe(insert.append("#### Description: " + app.description))
-    .pipe(insert.append("#### Client: " + app.client))
+    .pipe(insert.append("# " + app.name + "\n"))
+    .pipe(insert.append("#### Description: " + app.description + "\n"))
+    .pipe(insert.append("#### Client: " + app.client + "\n"))
     .pipe(insert.append("#### Authors: " + app.authors))
     .pipe(gulp.dest('.'));
 });
