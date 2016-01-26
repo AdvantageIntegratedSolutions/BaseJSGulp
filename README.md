@@ -47,12 +47,11 @@ git remote set-url origin <new repo git url>
   "authors": ["dev@advantagequickbase.com"] //list of authors
 }
 
+```
 Please note, set the "GULPPASSWORD" ENV variable to avoid committing password. Simply keep the password value empty in app.json or remove it.
 
 ```shell
 sudo vi ~/.bash_profile; export GULPPASSWORD=><PASSWORD>;
-```
-
 ```
 - run "npm install"
 - run "gulp init"
