@@ -57,7 +57,7 @@ sudo vi ~/.bash_profile; export GULPPASSWORD=><PASSWORD>;
 - run "npm install"
 - run "gulp init"
 
-## How to use?
+## How to use
 To start automating tasks, run the following commands within your app:
 
 - "gulp deploy" - if you want to run your tasks periodically, run "gulp deploy" and it will execute all deployment tasks.
