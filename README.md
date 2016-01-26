@@ -48,11 +48,6 @@ git remote set-url origin <new repo git url>
 }
 
 ```
-Please note, set the "GULPPASSWORD" ENV variable to avoid committing password. Simply keep the password value empty in app.json or remove it.
-
-```shell
-sudo vi ~/.bash_profile; export GULPPASSWORD=><PASSWORD>;
-```
 - run "npm install"
 - run "gulp init"
 
@@ -60,6 +55,12 @@ sudo vi ~/.bash_profile; export GULPPASSWORD=><PASSWORD>;
 To start automating tasks, run the following commands within your app:
 
 - "gulp deploy" - if you want to run your tasks periodically, run "gulp deploy" and it will execute all deployment tasks.
+
+**Set the "GULPPASSWORD" ENV variable to avoid committing password. Simply keep the password value empty in app.json or remove it.
+
+```shell
+sudo vi ~/.bash_profile; export GULPPASSWORD=><PASSWORD>;
+```
 
 - "gulp watch" - if you want to run your tasks each time you make a change to your app, run "gulp watch" in your terminal and it will execute all deployment tasks as you work in your app.
 
