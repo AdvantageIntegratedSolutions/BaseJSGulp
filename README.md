@@ -51,7 +51,7 @@ git remote set-url origin <new repo git url>
 **Set the "GULPPASSWORD" ENV variable to avoid committing password. Simply keep the password value empty in app.json or remove it.
 
 ```shell
-sudo vi ~/.bash_profile; export GULPPASSWORD=><PASSWORD>;
+sudo vi ~/.bash_profile; export GULPPASSWORD=>PASSWORD;
 ```
 
 - run "npm install"
